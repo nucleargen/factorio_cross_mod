@@ -1,0 +1,38 @@
+[h]Factorio Cross mod[/h]
+[b]Description:[/b]
+Adds cross-support between some other mods. You can use any mix of supported mods. Customisable behaviour through mod settings.
+
+[spoiler=Long description][/spoiler]
+
+Details:
+    Name: Factorio Cross Mod (cross_mod)
+    Category: compilation, mod pack, localization, other
+    MOD Version: 1.0.0
+    Factorio Version: 0.15.X
+    Latest Release: 29 Jun 2017
+    Dependencies: 
+       [url=https://mods.factorio.com/mods/docpaisley/portal-research]Portal Research[/url] - optional
+       [url=https://mods.factorio.com/mods/EmperorZelos/omnimatter]OmniMatter[/url] - optional
+       [url=https://mods.factorio.com/mods/5cript/StrangeMatter]StrangeMatter[/url] - optional
+    Website: [url=https://mods.factorio.com/mods/nucleargen/cross_mod]Mod Portal[/url]
+    Source code: [url=https://github.com/nucleargen/factorio_cross_mod]GitHub[/url]
+    Author: nucleargen
+    Contact: Website or whatever(also optional)
+    Tags: cross-support, portal-research, omnimatter, strange matter, russian, mod-pack
+    License: Unlicense
+
+Downloads:
+[url=https://mods.factorio.com/mods/nucleargen/cross_mod]Mod Portal[/url]
+
+[spoiler=Special thanks]
+toxic jungle
+mountains
+rso
+angel infinite
+portal research
+omnimatter
+strange matter
+
+[/spoiler]
+
+[spoiler=Change log][/spoiler]

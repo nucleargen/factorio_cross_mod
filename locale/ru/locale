@@ -1,0 +1,13 @@
+[mod-setting-name]
+pra_factorium_ore_graphics=Новая графика для Факториума
+pra_factorium_ore_omnitraction_tier=Уровень омнитракции Факториума
+pra_only_omnite=Внепланетные ресурсы: только омнит
+pra_omnite_weight=Вероятность генерации омнита
+pra_offworld_factorium_ore=Внепланетный Факториум
+
+[mod-setting-description]
+pra_factorium_ore_graphics=Меняет графику Факториума для лучшего соответствия названию. А также, чтобы избежать конфузов с похожестью на Омнит, если включен мод Omnimatter
+pra_factorium_ore_omnitraction_tier=Уровень технологичности рецептов омнитракции Факториума\n\nРаботает, только если моды Omnimatter и Portal Research включены одновременно
+pra_only_omnite=Generate only omnite ore at offworld sites. If unchecked - it possible to find other ores on asteroids.\n\nРаботает, только если моды Omnimatter и Portal Research включены одновременно
+pra_omnite_weight=Если опция "Только омнит" отключена - определяет вероятность найти другие руды вне планеты. Чем меньше значение - тем выше вероятность.\n\nРаботает, только если моды Omnimatter и Portal Research включены одновременно
+pra_offworld_factorium_ore=Будучи включенной, опция позволяет найти Факториум вне планеты. При включенном моде Omnimatter и опции "Только омнит" - игнорируется
