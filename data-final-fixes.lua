@@ -30,3 +30,5 @@ data.raw.technology["sulfuric-acid-synthesis"] = nil;
 
 end
 end
+
+require("prototypes/omnimatter/entity")

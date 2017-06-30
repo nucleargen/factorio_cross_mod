@@ -45,7 +45,7 @@ function offworld_resources_setup()
 	end
 
 	if game.active_mods[fcm_defines.mods_names.portal_research] then
-		if not settings.global[fcm_defines.keys.names.settings.only_omnite].value then
+		if not game.active_mods[fcm_defines.mods_names.omnimatter] or not settings.global[fcm_defines.keys.names.settings.only_omnite].value then
 			if settings.global[fcm_defines.keys.names.settings.offworld_factorium_ore].value then
 				remote.call(
 					fcm_defines.mods_interfaces.portal_research, 

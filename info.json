@@ -9,6 +9,9 @@
   "source":				"https://github.com/nucleargen/factorio_cross_mod",
   "dependencies": [
     "base >= 0.15.23",
+	"? factorio-ru < 0.0.1",
+	"? portal-research-addon < 0.0.1",
+		
     "? portal-research >= 0.6.8",
     "? omnimatter >= 1.2.4",
 	"? StrangeMatter >= 0.1.5",
