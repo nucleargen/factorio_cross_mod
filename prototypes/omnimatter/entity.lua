@@ -9,6 +9,7 @@ data.raw["assembling-machine"]["omnitractor-1"].idle_animation = {
           width = 119,
           height = 107,
           frame_count = 64,
+          animation_speed = 0.5,
           --shift = util.by_pixel(-0.5, -26.5),
           hr_version =
           {
@@ -19,6 +20,7 @@ data.raw["assembling-machine"]["omnitractor-1"].idle_animation = {
             width = 237,
             height = 214,
             frame_count = 64,
+            animation_speed = 0.5,
             --shift = util.by_pixel(-0.25, -26.5),
           }
         },
@@ -30,7 +32,8 @@ data.raw["assembling-machine"]["omnitractor-1"].idle_animation = {
           width = 132,
           height = 74,
           frame_count = 64,
-          --shift = util.by_pixel(20, -10),
+          animation_speed = 0.5,
+          shift = util.by_pixel(20, -10),
           hr_version =
           {
             filename = fcm_defines.mod_directory .. "/graphics/entity/hr-omnitractor-shadow.png",
@@ -41,59 +44,53 @@ data.raw["assembling-machine"]["omnitractor-1"].idle_animation = {
             width = 279,
             height = 152,
             frame_count = 64,
-            --shift = util.by_pixel(16.75, -10),
+            animation_speed = 0.5,
+            shift = util.by_pixel(16.75, -10),
           }
         },
 	}
 }
-data.raw["assembling-machine"]["omnitractor-1"].animation = {
-	layers = {
-        -- Centrifuge C
-        {
-          filename = fcm_defines.mod_directory .. "/graphics/entity/omnitractor-light.png",
-          priority = "high",
-          blend_mode = "additive", -- centrifuge
-          line_length = 8,
-          width = 96,
-          height = 104,
-          frame_count = 64,
-          --shift = util.by_pixel(0, -27),
-
-          hr_version =
-          {
-            filename = fcm_defines.mod_directory .. "/graphics/entity/hr-omnitractor-light.png",
-            priority = "high",
-            scale = 0.5,
-            blend_mode = "additive", -- centrifuge
-            line_length = 8,
-            width = 190,
-            height = 207,
-            frame_count = 64,
-            --shift = util.by_pixel(0, -27.25),
-          }
-		}
-	}
-}
+--data.raw["assembling-machine"]["omnitractor-1"].animation = {
+--layers = {
+--}
+--}
 data.raw["assembling-machine"]["omnitractor-1"].working_visualisations = {
+    --{
+        --effect = "uranium-glow", -- changes alpha based on energy source light intensity
+        --light = {intensity = 1.0, size = 8.0, shift = {0.0, 0.0}, color = {r = 1.0, g = 1.0, b = 0.0}},
+        --apply_recipe_tint = "primary"
+    --}
+    -- Centrifuge C
     {
         apply_recipe_tint = "primary",
-        animation =
-        {
-          filename = fcm_defines.mod_directory .. "/graphics/entity/omnitractor-light.png",
-          width = 96,
-          height = 104,
-          frame_count = 64,
-          line_length = 8,
-          animation_speed = 0.5,
-          hr_version = {
-            filename = fcm_defines.mod_directory .. "/graphics/entity/hr-omnitractor-light.png",
-            width = 190,
-            height = 207,
-            frame_count = 64,
+        north_position = {0, 0},
+        west_position = {0, 0},
+        south_position = {0, 0},
+        east_position = {0, 0},
+        animation = {
+            filename = fcm_defines.mod_directory .. "/graphics/entity/omnitractor-light.png",
+            priority = "high",
+            blend_mode = "additive", -- centrifuge
             line_length = 8,
+            width = 96,
+            height = 104,
+            frame_count = 64,
             animation_speed = 0.5,
-            scale = 0.5
-          }
+            --shift = util.by_pixel(0, -27),
+
+            hr_version =
+            {
+                filename = fcm_defines.mod_directory .. "/graphics/entity/hr-omnitractor-light.png",
+                priority = "high",
+                scale = 0.5,
+                blend_mode = "additive", -- centrifuge
+                line_length = 8,
+                width = 190,
+                height = 207,
+                frame_count = 64,
+                animation_speed = 0.5,
+                --shift = util.by_pixel(0, -27.25),
+            }
         }
     }
 }

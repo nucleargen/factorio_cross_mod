@@ -1,0 +1,6 @@
+cd "C:\Program Files\7-Zip"
+7z.exe a "C:\Users\USERNAME\Documents\My Games\MYMODSTUFF\MYMOD_0.1.0.zip" "C:\Users\USERNAME\Documents\My Games\MYMODSTUFF\MYMOD_0.1.0"
+move "C:\Users\USERNAME\Documents\My Games\MYMODSTUFF\MYMOD_0.1.0.zip" "C:\Users\USERNAME\AppData\Roaming\Factorio\mods"
+
+cd "C:\Program Files (x86)\Steam\steamapps\common\Factorio\bin\x64"
+start factorio.exe 
