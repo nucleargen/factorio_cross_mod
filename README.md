@@ -1,5 +1,5 @@
 Factorio Cross Mod
-------------------
+===
 Adds cross-support between some other mods. You can use any mix of supported mods. Customizable behaviour through mod settings. Also includes several old simple mods (customizable!). Contains russian locale for all supported mods.
 
 All mod dependencies are optional - use any mix of them.
@@ -11,7 +11,8 @@ All mod dependencies are optional - use any mix of them.
 + Latest Release: 03 Jul 2017
 + Dependencies: all are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
-+ Source code: [GitHub](url=https://github.com/nucleargen/factorio_cross_mod)
++ Factorio forums: [thread]()
++ Source code: [GitHub](https://github.com/nucleargen/factorio_cross_mod)
 + Author: nucleargen
 + Contact: [by pm on factorio forums](https://forums.factorio.com/ucp.php?i=pm&mode=compose&u=20136), [factorio mod portal discussions](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod/discussion)
 + Tags: cross-support, portal-research, omnimatter, strange matter, russian, mod-pack
@@ -51,7 +52,8 @@ Additionally contains changes graphics for Factorium ore
 + [Creative Mode](https://mods.factorio.com/mods/Mooncat/creative-mode)
 + [Shuttle Train Lite](https://mods.factorio.com/mods/folk/folk-shuttle)
 + [Resource Spawner Overhaul](https://mods.factorio.com/mods/orzelek/rso-mod)
-### Corrected (when needed) EN-locale provided for all supported mods.
+
+** Corrected (when needed) EN-locale provided for all supported mods.**
 
 ## Other features:
 + Includes reworked [Toxic-jungle](https://mods.factorio.com/mods/nucleargen/toxic-jungle) mod. Enables by runtime setting. Customizable jungle density.
@@ -59,7 +61,7 @@ Contains remote interface: remote.call("fcm_jungle","register_surface",surface_n
 + Includes reworked [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up) mod. Enables by runtime setting. Customizable mountain density and hardness.
 Contains remote interface: remote.call("fcm_mountains","register_surface",surface_name) and remote.call("fcm_mountains","unregister_surface",surface_name) for controlling mountains generation on modded surfaces. By default, generation allowed only on "nauvis"
 
-## List of mod settings:
+## Mod settings:
 + [startup] **Factorium ore omnitraction tier** - sets up omnitraction recipes tier of Factorium ore from omnite. *Requires both Portal Research and Omnimatter mods*
 + [startup] **Strange matter to omnite only** - when enabled - only omnite can be retrieved from strange matter. *Requires both StrangeMatter and Omnimatter mods*
 + [runtime-global] **Offworld resources: only omnite** - when enabled - only omnite can be found on offworld sites. *Requires both Portal Research and Omnimatter mods*
@@ -111,6 +113,6 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 
 
 ChangeLog
----------
+---
 
 +  **0.15.0** | *03.07.2017* - merged portal_research_addon and factorio-ru in single mod, added and reworked toxic-jungle and mountains mods, added new graphics for omnitractos
