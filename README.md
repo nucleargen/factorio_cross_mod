@@ -6,12 +6,12 @@ All mod dependencies are optional - use any mix of them.
 
 + Name: Factorio Cross Mod (factorio_cross_mod)
 + Category: compilation, mod pack, localization, other
-+ MOD Version: 0.15.0
++ MOD Version: 1.0.0
 + Factorio Version: 0.15.X
 + Latest Release: 03 Jul 2017
 + Dependencies: all are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
-+ Factorio forums: [thread]()
++ Factorio forums: [thread](https://forums.factorio.com/viewtopic.php?f=94&t=50522)
 + Source code: [GitHub](https://github.com/nucleargen/factorio_cross_mod)
 + Author: nucleargen
 + Contact: [by pm on factorio forums](https://forums.factorio.com/ucp.php?i=pm&mode=compose&u=20136), [factorio mod portal discussions](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod/discussion)
@@ -53,7 +53,7 @@ Additionally contains changes graphics for Factorium ore
 + [Shuttle Train Lite](https://mods.factorio.com/mods/folk/folk-shuttle)
 + [Resource Spawner Overhaul](https://mods.factorio.com/mods/orzelek/rso-mod)
 
-** Corrected (when needed) EN-locale provided for all supported mods.**
+**Corrected (when needed) EN-locale provided for all supported mods.**
 
 ## Other features:
 + Includes reworked [Toxic-jungle](https://mods.factorio.com/mods/nucleargen/toxic-jungle) mod. Enables by runtime setting. Customizable jungle density.
@@ -115,4 +115,4 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 ChangeLog
 ---
 
-+  **0.15.0** | *03.07.2017* - merged portal_research_addon and factorio-ru in single mod, added and reworked toxic-jungle and mountains mods, added new graphics for omnitractos
++  **1.0.0** | *03.07.2017* - merged portal_research_addon and factorio-ru in single mod, added and reworked toxic-jungle and mountains mods, added new graphics for omnitractos
