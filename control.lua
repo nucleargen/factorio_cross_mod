@@ -1,12 +1,12 @@
 require("defines")
+require("functions")
+
+require("interfaces/toxic-jungle/control")
+require("interfaces/mountains/control")
 
 script.on_init(function()
 	offworld_resources_setup()
 end)
-
---script.on_event(defines.events.on_configuration_changed, function()
---	offworld_resources_setup()
---end)
 
 script.on_event(defines.events.on_runtime_mod_setting_changed, function()
 	offworld_resources_setup()
@@ -59,3 +59,6 @@ function offworld_resources_setup()
 	end
 
 end
+
+remote.call("fcm_jungle","register_surface","nauvis")
+remote.call("fcm_mountains","register_surface","nauvis")
