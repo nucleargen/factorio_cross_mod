@@ -1,14 +1,14 @@
 Factorio Cross Mod
 ------------------
-Adds cross-support between some other mods. You can use any mix of supported mods. Customisable behaviour through mod settings. Also includes several old simple mods (customisable!). Contains russian locale for all supported mods.
+Adds cross-support between some other mods. You can use any mix of supported mods. Customizable behaviour through mod settings. Also includes several old simple mods (customizable!). Contains russian locale for all supported mods.
 
 All mod dependencies are optional - use any mix of them.
 
 + Name: Factorio Cross Mod (factorio_cross_mod)
 + Category: compilation, mod pack, localization, other
-+ MOD Version: 1.0.0
++ MOD Version: 0.15.0
 + Factorio Version: 0.15.X
-+ Latest Release: 29 Jun 2017
++ Latest Release: 03 Jul 2017
 + Dependencies: all are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
 + Source code: [GitHub](url=https://github.com/nucleargen/factorio_cross_mod)
@@ -19,9 +19,9 @@ All mod dependencies are optional - use any mix of them.
 
 ## List of supported mods:
 ### 1. Cross-link:
-+ [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter)
++ [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter).
 Additionally contains slightly modified, recipe depended and hd graphics for Omnitractors
-+ [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research)
++ [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research).
 Additionally contains changes graphics for Factorium ore
 + [StrangeMatter](https://mods.factorio.com/mods/5cript/StrangeMatter)
 ### 2. RU-locale:
@@ -54,9 +54,9 @@ Additionally contains changes graphics for Factorium ore
 ### Corrected (when needed) EN-locale provided for all supported mods.
 
 ## Other features:
-+ Includes reworked [Toxic-jungle](https://mods.factorio.com/mods/nucleargen/toxic-jungle) mod. Enables by runtime setting. Customisable jungle density.
++ Includes reworked [Toxic-jungle](https://mods.factorio.com/mods/nucleargen/toxic-jungle) mod. Enables by runtime setting. Customizable jungle density.
 Contains remote interface: remote.call("fcm_jungle","register_surface",surface_name) and remote.call("fcm_jungle","unregister_surface",surface_name) for controlling jungle generation on modded surfaces. By default, generation allowed only on "nauvis"
-+ Includes reworked [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up) mod. Enables by runtime setting. Customisable mountain density and hardness.
++ Includes reworked [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up) mod. Enables by runtime setting. Customizable mountain density and hardness.
 Contains remote interface: remote.call("fcm_mountains","register_surface",surface_name) and remote.call("fcm_mountains","unregister_surface",surface_name) for controlling mountains generation on modded surfaces. By default, generation allowed only on "nauvis"
 
 ## List of mod settings:
@@ -72,11 +72,11 @@ Contains remote interface: remote.call("fcm_mountains","register_surface",surfac
 + [runtime-global] **Density of mountains on resources patches** - Less number - more density
 
 ## Incompatibilities:
-+ factorio-ru
-+ portal-research-addon
-+ toxic-jungle
-+ mountains-up
-+ mountains
++ [Russian locale for some mods](https://mods.factorio.com/mods/nucleargen/factorio-ru)
++ [Portal Research Addon](https://mods.factorio.com/mods/nucleargen/portal-research-addon)
++ [Toxic Jungle](https://mods.factorio.com/mods/nucleargen/toxic-jungle)
++ [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up)
+
 All of these mods are added to mod dependecies with < 0.0.1 version to prevent startup with it.
 If you found other incompatibilities - tell, i'll resolve it or add to list
 
@@ -87,9 +87,9 @@ Some locale string are missing
 + Add settings for turn on/off updated graphics for other mods
 + Include Big_Brother_Tweaked mod as part of these mod
 + Update localizations
-+ Moar customisable features
++ Moar customizable features
 + Maybe cross-integrate/localize other mods (possibly by community request)
-+ RSO-like resource generator based on remote interfaces and per-surface settings, including AngelsInfiniteOres-like spawning (also fully customisable)
++ RSO-like resource generator based on remote interfaces and per-surface settings, including AngelsInfiniteOres-like spawning (also fully customizable)
 + Include optional plutonium workarounds like some other mods (mostly like in GotLag's [Reactors](https://mods.factorio.com/mods/GotLag/Reactors), but not the same
 + Rework Air Filtering and include it in pack
 
@@ -113,4 +113,4 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 ChangeLog
 ---------
 
-+  **1.0.0** | *30.06.2017* - merged portal_research_addon and factorio-ru in single mod, added and reworked toxic-jungle and mountains mods, added new graphics for omnitractos
++  **0.15.0** | *03.07.2017* - merged portal_research_addon and factorio-ru in single mod, added and reworked toxic-jungle and mountains mods, added new graphics for omnitractos
