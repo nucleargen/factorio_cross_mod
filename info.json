@@ -1,7 +1,7 @@
 {
 	"name":				"factorio_cross_mod",
 	"author":			"nucleargen",
-	"version":			"1.0.1",
+	"version":			"1.0.2",
 	"title":			"Factorio Cross Mod",
 	"homepage":			"https://forums.factorio.com/viewtopic.php?f=94&t=50522",
 	"description":		"Adds cross-support between some other mods. You can use any mix of supported mods. Customizable behaviour through mod settings. Also includes several old simple mods (customizable!). Contains russian locale for all supported mods.",
@@ -9,19 +9,18 @@
 	"source":			"https://github.com/nucleargen/factorio_cross_mod",
 	"dependencies": [
 		"base >= 0.15.23",
-		
-		"Noxys_Extra_Settings_Info >= 0.0.3",
 
 		"? factorio-ru < 0.0.1",
 		"? portal-research-addon < 0.0.1",
 		"? toxic-jungle < 0.0.1",
 		"? Mountains-up < 0.0.1",
+		"? Noxys_Extra_Settings_Info < 0.0.1",
 
 		"? portal-research >= 0.6.8",
 		"? omnimatter >= 1.2.4",
 		"? StrangeMatter >= 0.1.5",
 
-		"? BigBags",
+		"? BigBags >= 1.0.25",
 		"? Big_Brother",
 		"? Big_Brother_Tweaked",
 		"? DayPhaseAdjuster",

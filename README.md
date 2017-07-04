@@ -2,14 +2,14 @@ Factorio Cross Mod
 ===
 Adds cross-support between some other mods. You can use any mix of supported mods. Customizable behaviour through mod settings. Also includes several old simple mods (customizable!). Contains russian locale for all supported mods.
 
-All mod dependencies are optional (except one: noxys extra settings info, cause of i highly recommend it for convenience) - use any mix of them.
+All mod dependencies are optional - use any mix of them.
 
 + Name: Factorio Cross Mod (factorio_cross_mod)
 + Category: compilation, mod pack, localization, other
-+ MOD Version: 1.0.1
++ MOD Version: 1.0.2
 + Factorio Version: 0.15.X
 + Latest Release: 04 Jul 2017
-+ Dependencies: [Noxys Extra Settings Info](https://mods.factorio.com/mods/CobaltSky/Noxys_Extra_Settings_Info). All other are optional, full list see below
++ Dependencies: All are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
 + Factorio forums: [thread](https://forums.factorio.com/viewtopic.php?f=94&t=50522)
 + Source code: [GitHub](https://github.com/nucleargen/factorio_cross_mod)
@@ -26,11 +26,10 @@ Additionally contains slightly modified, recipe depended and hd graphics for Omn
 Additionally contains changes graphics for Factorium ore
 + [StrangeMatter](https://mods.factorio.com/mods/5cript/StrangeMatter)
 ### 2. RU-locale:
-+ [Noxys Extra Settings Info](https://mods.factorio.com/mods/CobaltSky/Noxys_Extra_Settings_Info)
 + [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter)
 + [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research)
 + [Strange Matter](https://mods.factorio.com/mods/5cript/StrangeMatter)
-+ [Big Bags (more space in bags +longer reach)](https://mods.factorio.com/mods/binbinhfr/BigBags)
++ [Big Bags (more space in bags +longer reach)](https://mods.factorio.com/mods/binbinhfr/BigBags) - up to date with v1.0.25
 + [Big Brother](https://mods.factorio.com/mods/Afforess/Big_Brother)
 + [DayPhaseAdjuster](https://mods.factorio.com/mods/AliceTheGorgon/DayPhaseAdjuster)
 + [EvoGUI - Evolution Factor Indicator and more](https://mods.factorio.com/mods/Narc/EvoGUI)
@@ -79,6 +78,7 @@ Contains remote interface: remote.call("fcm_mountains","register_surface",surfac
 + [Portal Research Addon](https://mods.factorio.com/mods/nucleargen/portal-research-addon)
 + [Toxic Jungle](https://mods.factorio.com/mods/nucleargen/toxic-jungle)
 + [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up)
++ [Noxys Extra Settings Info](https://mods.factorio.com/mods/CobaltSky/Noxys_Extra_Settings_Info)
 
 All of these mods are added to mod dependecies with < 0.0.1 version to prevent startup with it.
 If you found other incompatibilities - tell, i'll resolve it or add to list
@@ -117,5 +117,6 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 ChangeLog
 ---
 
++ **1.0.2** | *04.07.2017* - removed dependency from Noxys Extra Settings Info - code merged and reworked to be more informative and totally localized
 + **1.0.1** | *04.07.2017* - dependency from Noxys Extra Settings Info - very useful in mod settings. Fixed remote.calls since release [0.15.27](https://forums.factorio.com/viewtopic.php?f=3&t=50528)
-+ **1.0.0** | *03.07.2017* - merged portal_research_addon and factorio-ru in single mod, added and reworked toxic-jungle and mountains mods, added new graphics for omnitractos
++ **1.0.0** | *03.07.2017* - merged portal_research_addon and factorio-ru in single mod, added and reworked toxic-jungle and mountains mods, added new graphics for omnitractors
