@@ -6,6 +6,9 @@ require("interfaces/mountains/control")
 
 script.on_init(function()
 	offworld_resources_setup()
+
+	remote.call("fcm_jungle","register_surface","nauvis")
+	remote.call("fcm_mountains","register_surface","nauvis")
 end)
 
 script.on_event(defines.events.on_runtime_mod_setting_changed, function()
@@ -59,6 +62,3 @@ function offworld_resources_setup()
 	end
 
 end
-
-remote.call("fcm_jungle","register_surface","nauvis")
-remote.call("fcm_mountains","register_surface","nauvis")

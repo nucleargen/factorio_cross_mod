@@ -2,14 +2,14 @@ Factorio Cross Mod
 ===
 Adds cross-support between some other mods. You can use any mix of supported mods. Customizable behaviour through mod settings. Also includes several old simple mods (customizable!). Contains russian locale for all supported mods.
 
-All mod dependencies are optional - use any mix of them.
+All mod dependencies are optional (except one: noxys extra settings info, cause of i highly recommend it for convenience) - use any mix of them.
 
 + Name: Factorio Cross Mod (factorio_cross_mod)
 + Category: compilation, mod pack, localization, other
-+ MOD Version: 1.0.0
++ MOD Version: 1.0.1
 + Factorio Version: 0.15.X
-+ Latest Release: 03 Jul 2017
-+ Dependencies: all are optional, full list see below
++ Latest Release: 04 Jul 2017
++ Dependencies: [Noxys Extra Settings Info](https://mods.factorio.com/mods/CobaltSky/Noxys_Extra_Settings_Info). All other are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
 + Factorio forums: [thread](https://forums.factorio.com/viewtopic.php?f=94&t=50522)
 + Source code: [GitHub](https://github.com/nucleargen/factorio_cross_mod)
@@ -26,6 +26,7 @@ Additionally contains slightly modified, recipe depended and hd graphics for Omn
 Additionally contains changes graphics for Factorium ore
 + [StrangeMatter](https://mods.factorio.com/mods/5cript/StrangeMatter)
 ### 2. RU-locale:
++ [Noxys Extra Settings Info](https://mods.factorio.com/mods/CobaltSky/Noxys_Extra_Settings_Info)
 + [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter)
 + [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research)
 + [Strange Matter](https://mods.factorio.com/mods/5cript/StrangeMatter)
@@ -109,10 +110,12 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 + [docpaisley](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=17116), for Portal Research mod
 + [Afforess](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=7073), for Big Brother mod and StdLib project
 + [GotLag](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=1561), for his mods
++ [CobaltSky](https://mods.factorio.com/mods/CobaltSky), for his mods
 + All other modders, who develop mods that i'm localizing
 
 
 ChangeLog
 ---
 
-+  **1.0.0** | *03.07.2017* - merged portal_research_addon and factorio-ru in single mod, added and reworked toxic-jungle and mountains mods, added new graphics for omnitractos
++ **1.0.1** | *04.07.2017* - dependency from Noxys Extra Settings Info - very useful in mod settings. Fixed remote.calls since release [0.15.27](https://forums.factorio.com/viewtopic.php?f=3&t=50528)
++ **1.0.0** | *03.07.2017* - merged portal_research_addon and factorio-ru in single mod, added and reworked toxic-jungle and mountains mods, added new graphics for omnitractos
