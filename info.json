@@ -1,7 +1,7 @@
 {
 	"name":				"factorio_cross_mod",
 	"author":			"nucleargen",
-	"version":			"1.0.2",
+	"version":			"1.0.3",
 	"title":			"Factorio Cross Mod",
 	"homepage":			"https://forums.factorio.com/viewtopic.php?f=94&t=50522",
 	"description":		"Adds cross-support between some other mods. You can use any mix of supported mods. Also includes several old simple mods. Contains russian locale for all supported mods. Customizable behaviour through mod settings.",

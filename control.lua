@@ -53,9 +53,9 @@ function offworld_resources_setup()
 				remote.call(
 					fcm_defines.mods_interfaces.portal_research, 
 					"add_offworld_resource",
-					fcm_defines.defaults.offworld_factorium_ore.name,
-					fcm_defines.defaults.offworld_factorium_ore.weight,
-					fcm_defines.defaults.offworld_factorium_ore.richness
+					fcm_defines.defaults.factorium_ore.name,
+					fcm_defines.defaults.factorium_ore.weight,
+					fcm_defines.defaults.factorium_ore.richness
 				)
 			end
 		end
