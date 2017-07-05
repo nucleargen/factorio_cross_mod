@@ -4,9 +4,9 @@ Adds cross-support between some other mods. You can use any mix of supported mod
 
 + Name: Factorio Cross Mod (factorio_cross_mod)
 + Category: compilation, mod pack, localization, other
-+ MOD Version: 1.0.3
++ MOD Version: 1.1.0
 + Factorio Version: 0.15.X
-+ Latest Release: 05 Jul 2017
++ Latest Release: 06 Jul 2017
 + Dependencies: All are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
 + Factorio forums: [thread](https://forums.factorio.com/viewtopic.php?f=94&t=50522)
@@ -62,13 +62,15 @@ Additionally contains changes graphics for Factorium ore
 Contains remote interface: remote.call("fcm_jungle","register_surface",surface_name) and remote.call("fcm_jungle","unregister_surface",surface_name) for controlling jungle generation on modded surfaces. By default, generation allowed only on "nauvis"
 + Includes reworked [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up) mod. Enables by runtime setting. Customizable mountain density and hardness.
 Contains remote interface: remote.call("fcm_mountains","register_surface",surface_name) and remote.call("fcm_mountains","unregister_surface",surface_name) for controlling mountains generation on modded surfaces. By default, generation allowed only on "nauvis"
++ Includes reworked [Big Brother Tweaked](https://mods.factorio.com/mods/nucleargen/Big_Brother_Tweaked mod). Enables by startup setting. Available if Big Brother mod active. Changes radius, scan time and power consuption of Big Brother's radars and survelliance cameras.
 
 ## Mod settings:
-+ [startup] **Factorium ore omnitraction tier** - sets up omnitraction recipes tier of Factorium ore from omnite. *Requires both Portal Research and Omnimatter mods*
-+ [startup] **Strange matter to omnite only** - when enabled - only omnite can be retrieved from strange matter. *Requires both StrangeMatter and Omnimatter mods*
-+ [runtime-global] **Offworld resources: only omnite** - when enabled - only omnite can be found on offworld sites. *Requires both Portal Research and Omnimatter mods*
-+ [runtime-global] **Omnite generation weight** - if only omnite option disabled - defines possibility to find other solid ores on offworld sites. Smaller value - higher possibility. *Requires both Portal Research and Omnimatter mods*
-+ [runtime-global] **Offworld Factorium ore** - if enabled - makes possible to find factorium ore on offworld sites. *Requires only Portal Research mod*. If Omnimatter present and only omnite option enabled - this setting will be omitted.
++ [startup] **Factorium ore omnitraction tier** - sets up omnitraction recipes tier of Factorium ore from omnite. *Available if both Portal Research and Omnimatter mods active*
++ [startup] **Strange matter to omnite only** - when enabled - only omnite can be retrieved from strange matter. *Available if both StrangeMatter and Omnimatter mods active*
++ [startup] **Big brother's radars tweak** - activates tweaks for Big brother's radars. *Available if Big Brother mod active*
++ [runtime-global] **Offworld resources: only omnite** - when enabled - only omnite can be found on offworld sites. *Available if both Portal Research and Omnimatter mods active*
++ [runtime-global] **Omnite generation weight** - if only omnite option disabled - defines possibility to find other solid ores on offworld sites. Smaller value - higher possibility. *Available if both Portal Research and Omnimatter mods active*
++ [runtime-global] **Offworld Factorium ore** - if enabled - makes possible to find factorium ore on offworld sites. *Available if Portal Research mod active*. If Omnimatter present and only omnite option enabled - this setting will be omitted.
 + [runtime-global] **Enable toxic jungles** - If enabled - generate high-density forests anywhere on registered surfaces
 + [runtime-global] **Density of toxic jungles** - How dense jungles is
 + [runtime-global] **Enable Mountains** - If enabled - generate mountains over any solid resource patches on registered surfaces
@@ -82,6 +84,7 @@ Contains remote interface: remote.call("fcm_mountains","register_surface",surfac
 + [Toxic Jungle](https://mods.factorio.com/mods/nucleargen/toxic-jungle)
 + [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up)
 + [Noxys Extra Settings Info](https://mods.factorio.com/mods/CobaltSky/Noxys_Extra_Settings_Info)
++ [Big Brother Tweaked](https://mods.factorio.com/mods/nucleargen/Big_Brother_Tweaked)
 
 All of these mods are added to mod dependecies with < 0.0.1 version to prevent startup with it.
 If you found other incompatibilities - tell, i'll resolve it or add to list
@@ -92,8 +95,6 @@ Missings locale string in mod-setting-description when original mod doesn't have
 
 ## Future plans:
 + Add settings for turn on/off updated graphics for other mods
-+ Include Big_Brother_Tweaked mod as part of these mod
-+ Update localizations
 + Moar customizable features
 + Maybe cross-integrate/localize other mods (possibly by community request)
 + RSO-like resource generator based on remote interfaces and per-surface settings, including AngelsInfiniteOres-like spawning (also fully customizable)
@@ -121,6 +122,7 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 ChangeLog
 ---
 
++ **1.1.0** | *06.07.2017* - Included rewritten radars tweaks from Big Brother Tweaked. Now enables by mod setting and active Big Brother mod.
 + **1.0.3** | *05.07.2017* - Bugfix with offworld factorium ore. Bugfix with jungle generation when mountains enabled too. Added debug mode setting.
 + **1.0.2** | *05.07.2017* - Removed dependency from Noxys Extra Settings Info - code merged and reworked to be more informative and totally localized. Updated localizations of all supported mods and added localization for: Omniwood, Factorissimo2 (minor locale fixes), The Ruins Mod and Robot Battery Research. Localization now includes mod names and descriptions.
 + **1.0.1** | *04.07.2017* - Dependency from Noxys Extra Settings Info - very useful in mod settings. Fixed remote.calls since release [0.15.27](https://forums.factorio.com/viewtopic.php?f=3&t=50528)

@@ -2,6 +2,7 @@ require("defines")
 
 require("prototypes/omnimatter/entity")
 require("prototypes/omnimatter/recipe")
+require("prototypes/big_brother/entity")
 
 if mods[fcm_defines.mods_names.strange_matter] and mods[fcm_defines.mods_names.omnimatter] then
 if settings.startup[fcm_defines.keys.names.settings.strange_matter_only_omnite].value then

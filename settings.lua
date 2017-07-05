@@ -7,14 +7,14 @@ data:extend({
 --	name = fcm_defines.keys.names.settings.factorium_ore_graphics,
 --	type = "bool-setting",
 --	default_value = true,
---	order = "a-a"
+--	order = "ps-fog"
 --},
 {
 	setting_type = "runtime-global",
 	name = fcm_defines.keys.names.settings.offworld_factorium_ore,
 	type = "bool-setting",
 	default_value = false,
-	order = "a-c"
+	order = "ps-ofo"
 }
 })
 end
@@ -28,14 +28,14 @@ data:extend({
 	default_value = fcm_defines.defaults.factorium_ore.omnitraction_tier,
 	minimum_value = 1,
 	maximum_value = 3,
-	order = "a-b"
+	order = "om+ps-foot"
 },
 {
 	setting_type = "runtime-global",
 	name = fcm_defines.keys.names.settings.only_omnite,
 	type = "bool-setting",
 	default_value = true,
-	order = "a-a"
+	order = "om+ps-oo"
 },
 {
 	setting_type = "runtime-global",
@@ -43,7 +43,7 @@ data:extend({
 	type = "int-setting",
 	default_value = fcm_defines.defaults.offworld_omnite.weight,
 	minimum_value = 1,
-	order = "a-b"
+	order = "om+ps-oow"
 }
 })
 end
@@ -56,7 +56,19 @@ data:extend({
 	name = fcm_defines.keys.names.settings.strange_matter_only_omnite,
 	type = "bool-setting",
 	default_value = false,
-	order = "a-c"
+	order = "om+sm-smoo"
+}
+})
+end
+
+if mods[fcm_defines.mods_names.big_brother] then
+data:extend({
+{
+	setting_type = "startup",
+	name = fcm_defines.keys.names.settings.big_brother_tweaks,
+	type = "bool-setting",
+	default_value = true,
+	order = "bb-bbt"
 }
 })
 end
@@ -67,7 +79,7 @@ data:extend({
 	name			=	fcm_defines.keys.names.settings.debug_mode,
 	type			=	"bool-setting",
 	default_value	=	false,
-	order			=	"a"
+	order			=	"1"
 },
 {
 	setting_type	=	"runtime-global",
