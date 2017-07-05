@@ -1,18 +1,31 @@
 require("defines")
 require("functions")
 
-require("interfaces/toxic-jungle/control")
+fcm_debug = settings.global[fcm_defines.keys.names.settings.debug_mode].value
+if not fcm_registry then fcm_registry = {} end 
+if not fcm_registry.events then fcm_registry.events = {} end
+if not fcm_registry.events.on_chunk_generated then fcm_registry.events.on_chunk_generated = {} end
+
 require("interfaces/mountains/control")
+require("interfaces/toxic-jungle/control")
 
 script.on_init(function()
 	offworld_resources_setup()
 
-	remote.call("fcm_jungle","register_surface","nauvis")
-	remote.call("fcm_mountains","register_surface","nauvis")
+	--nauvis registered by default by hardcode. may be unregistered by remove call
+	--remote.call("fcm_jungle","register_surface","nauvis")
+	--remote.call("fcm_mountains","register_surface","nauvis")
 end)
 
 script.on_event(defines.events.on_runtime_mod_setting_changed, function()
 	offworld_resources_setup()
+end)
+
+script.on_event(defines.events.on_chunk_generated, function(event)
+	if fcm_debug then log("Count registered on chunk generated handlers: " .. #fcm_registry.events.on_chunk_generated) end
+	for _,fn in pairs(fcm_registry.events.on_chunk_generated) do
+		fn(event)
+	end
 end)
 
 function offworld_resources_setup()

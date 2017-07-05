@@ -11,6 +11,8 @@ require("prototypes/portal-research/resource")
 require("prototypes/strange-matter/recipe")
 require("prototypes/strange-matter/technology")
 
+if not fcm_registry then fcm_registry = {} end 
+
 if mods[fcm_defines.mods_names.omnimatter] and mods[fcm_defines.mods_names.portal_research] then
 	local factorium_ore_omnitraction_tier = settings.startup[fcm_defines.keys.names.settings.factorium_ore_omnitraction_tier].value
 	if not factorium_ore_omnitraction_tier then 

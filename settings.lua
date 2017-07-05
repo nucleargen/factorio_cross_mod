@@ -64,6 +64,13 @@ end
 data:extend({
 {
 	setting_type	=	"runtime-global",
+	name			=	fcm_defines.keys.names.settings.debug_mode,
+	type			=	"bool-setting",
+	default_value	=	false,
+	order			=	"a"
+},
+{
+	setting_type	=	"runtime-global",
 	name			=	fcm_defines.keys.names.settings.jungle_enabled,
 	type			=	"bool-setting",
 	default_value	=	false,

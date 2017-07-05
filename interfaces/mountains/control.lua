@@ -1,7 +1,9 @@
 -- mountains object
 local Mountains = {}
 
-Mountains.allowed_surfaces = {}
+Mountains.allowed_surfaces = {
+	"nauvis"
+}
 
 Mountains.generate = function(event)
 	local surface = event.surface
@@ -15,7 +17,7 @@ Mountains.generate = function(event)
 			end
 		end
 	end
-
+	if fcm_debug then log("Mountains: generation on chunk ready: "..tostring(allowed)) end
 	if not allowed then 
 		return
 	end
@@ -73,7 +75,7 @@ end
 Mountains.register_surface = function(surface_name)
 	if surface_name then
 		Mountains.allowed_surfaces[#Mountains.allowed_surfaces+1] = surface_name
-		log("Added mountains surface: "..surface_name)
+		if fcm_debug then log("Added mountains surface: "..surface_name) end
 	end
 end
 
@@ -82,13 +84,13 @@ Mountains.unregister_surface = function(surface_name)
 		for i,s in ipairs(Mountains.allowed_surfaces) do
 			if surface_name == s then
 				table.remove(Mountains.allowed_surfaces,i)
-				log("Removed mountains surface: "..surface_name)
+				if fcm_debug then log("Removed mountains surface: "..surface_name) end
 			end
 		end
 	end
 end
 
-script.on_event(defines.events.on_chunk_generated, Mountains.generate)
+fcm_registry.events.on_chunk_generated[#fcm_registry.events.on_chunk_generated+1] = Mountains.generate
 
 remote.add_interface("fcm_mountains",{
 	register_surface = Mountains.register_surface,
