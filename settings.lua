@@ -92,7 +92,7 @@ data:extend({
 	default_value	=	6,
 	minimum_value	=	1,
 	maximum_value	=	10,
-	order			=	"m-b"
+	order			=	"mt-b"
 },
 {
 	setting_type	=	"runtime-global",
@@ -101,6 +101,6 @@ data:extend({
 	default_value	=	1,
 	minimum_value	=	1,
 	maximum_value	=	16,
-	order			=	"m-c"
+	order			=	"mt-c"
 }
 })

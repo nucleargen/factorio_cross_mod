@@ -1,21 +1,19 @@
 Factorio Cross Mod
 ===
-Adds cross-support between some other mods. You can use any mix of supported mods. Customizable behaviour through mod settings. Also includes several old simple mods (customizable!). Contains russian locale for all supported mods.
-
-All mod dependencies are optional - use any mix of them.
+Adds cross-support between some other mods. You can use any mix of supported mods. Also includes several old simple mods. Contains russian locale for all supported mods. Customizable behaviour through mod settings.
 
 + Name: Factorio Cross Mod (factorio_cross_mod)
 + Category: compilation, mod pack, localization, other
 + MOD Version: 1.0.2
 + Factorio Version: 0.15.X
-+ Latest Release: 04 Jul 2017
++ Latest Release: 05 Jul 2017
 + Dependencies: All are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
 + Factorio forums: [thread](https://forums.factorio.com/viewtopic.php?f=94&t=50522)
 + Source code: [GitHub](https://github.com/nucleargen/factorio_cross_mod)
 + Author: nucleargen
 + Contact: [by pm on factorio forums](https://forums.factorio.com/ucp.php?i=pm&mode=compose&u=20136), [factorio mod portal discussions](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod/discussion)
-+ Tags: cross-support, portal-research, omnimatter, strange matter, russian, mod-pack
++ Tags: cross-support, portal-research, omnimatter, strange matter, russian, mod-pack, toxic jungle, mountains
 + License: [MIT](https://opensource.org/licenses/MIT)
 
 ## List of supported mods:
@@ -25,33 +23,37 @@ Additionally contains slightly modified, recipe depended and hd graphics for Omn
 + [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research).
 Additionally contains changes graphics for Factorium ore
 + [StrangeMatter](https://mods.factorio.com/mods/5cript/StrangeMatter)
-### 2. RU-locale:
-+ [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter)
-+ [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research)
-+ [Strange Matter](https://mods.factorio.com/mods/5cript/StrangeMatter)
-+ [Big Bags (more space in bags +longer reach)](https://mods.factorio.com/mods/binbinhfr/BigBags) - up to date with v1.0.25
-+ [Big Brother](https://mods.factorio.com/mods/Afforess/Big_Brother)
-+ [DayPhaseAdjuster](https://mods.factorio.com/mods/AliceTheGorgon/DayPhaseAdjuster)
-+ [EvoGUI - Evolution Factor Indicator and more](https://mods.factorio.com/mods/Narc/EvoGUI)
-+ [Expanded Color Lamps](https://mods.factorio.com/mods/Klonan/Expanded_Color_Lamps)
-+ [Fully Automated Rail Layer](https://mods.factorio.com/mods/Choumiko/FARL)
-+ [Flare Stack](https://mods.factorio.com/mods/GotLag/Flare%20Stack)
-+ [Infinite Inserter Capacity Research](https://mods.factorio.com/mods/Emmote/InfiniteInserterCapacity_Research)
-+ [KS Power](https://mods.factorio.com/mods/Klonan/KS_Power)
-+ [Noxys Waterfill](https://mods.factorio.com/mods/CobaltSky/Noxys_Waterfill)
-+ [Nuclear Locomotives](https://mods.factorio.com/mods/GotLag/Nuclear%20Locomotives)
-+ [Orbital Ion Cannon](https://mods.factorio.com/mods/Supercheese/Orbital%20Ion%20Cannon)
-+ [Power Armor MK3](https://mods.factorio.com/mods/jimmy_1283/Power%20Armor%20MK3)
-+ [Space Extension Mod](https://mods.factorio.com/mods/LordKTor/SpaceMod)
-+ [Warehousing Mod](https://mods.factorio.com/mods/kingarthur/Warehousing%20v15)
-+ [YARM - Resource Monitor](https://mods.factorio.com/mods/Narc/YARM)
-+ [Air filtering](https://mods.factorio.com/mods/Schorty/air-filtering)
-+ [Alien Biomes](https://mods.factorio.com/mods/Earendel/alien-biomes)
-+ [Angel's Infinite Ores](https://mods.factorio.com/mods/Arch666Angel/angelsinfiniteores)
-+ [Better Cable and Steel Making](https://mods.factorio.com/mods/LaVADraGoN/cableSteelMaking)
-+ [Creative Mode](https://mods.factorio.com/mods/Mooncat/creative-mode)
-+ [Shuttle Train Lite](https://mods.factorio.com/mods/folk/folk-shuttle)
-+ [Resource Spawner Overhaul](https://mods.factorio.com/mods/orzelek/rso-mod)
+### 2. RU-locale (including mod names and descriptions):
++ [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter) *up to date with v1.2.5*
++ [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research) *partially up to date with v0.7.7*
++ [Strange Matter](https://mods.factorio.com/mods/5cript/StrangeMatter) *up to date with v0.1.6*
++ [Big Bags (more space in bags +longer reach)](https://mods.factorio.com/mods/binbinhfr/BigBags) *up to date with v1.0.25*
++ [Big Brother](https://mods.factorio.com/mods/Afforess/Big_Brother) *up to date with v0.4.3*
++ [DayPhaseAdjuster](https://mods.factorio.com/mods/AliceTheGorgon/DayPhaseAdjuster) *up to date with v1.0.1*
++ [EvoGUI - Evolution Factor Indicator and more](https://mods.factorio.com/mods/Narc/EvoGUI) *up to date with v0.4.205*
++ [Expanded Color Lamps](https://mods.factorio.com/mods/Klonan/Expanded_Color_Lamps) *up to date with v0.1.2*
++ [Fully Automated Rail Layer](https://mods.factorio.com/mods/Choumiko/FARL) *up to date with v1.1.6*
++ [Flare Stack](https://mods.factorio.com/mods/GotLag/Flare%20Stack) *up to date with v2.1.4*
++ [Infinite Inserter Capacity Research](https://mods.factorio.com/mods/Emmote/InfiniteInserterCapacity_Research) *up to date with v0.1.1*
++ [KS Power](https://mods.factorio.com/mods/Klonan/KS_Power) *up to date with v0.1.12*
++ [Noxys Waterfill](https://mods.factorio.com/mods/CobaltSky/Noxys_Waterfill) *up to date with v0.0.4*
++ [Nuclear Locomotives](https://mods.factorio.com/mods/GotLag/Nuclear%20Locomotives) *up to date with v1.1.2*
++ [Orbital Ion Cannon](https://mods.factorio.com/mods/Supercheese/Orbital%20Ion%20Cannon) *up to date with v1.5.2*
++ [Power Armor MK3](https://mods.factorio.com/mods/jimmy_1283/Power%20Armor%20MK3) *up to date with v0.1.2*
++ [Space Extension Mod](https://mods.factorio.com/mods/LordKTor/SpaceMod) *up to date with v0.3.0*
++ [Warehousing Mod](https://mods.factorio.com/mods/kingarthur/Warehousing%20v15) *up to date with v0.0.14*
++ [YARM - Resource Monitor](https://mods.factorio.com/mods/Narc/YARM) *up to date with v0.7.203*
++ [Air filtering](https://mods.factorio.com/mods/Schorty/air-filtering) *up to date with v0.5.0*
++ [Alien Biomes](https://mods.factorio.com/mods/Earendel/alien-biomes) *up to date with v0.2.7*
++ [Angel's Infinite Ores](https://mods.factorio.com/mods/Arch666Angel/angelsinfiniteores) *up to date with v0.6.11*
++ [Better Cable and Steel Making](https://mods.factorio.com/mods/LaVADraGoN/cableSteelMaking) *up to date with v1.0.2*
++ [Creative Mode](https://mods.factorio.com/mods/Mooncat/creative-mode) *partially up to date with v0.1.2*
++ [Shuttle Train Lite](https://mods.factorio.com/mods/folk/folk-shuttle) *up to date with v0.1.12*
++ [Resource Spawner Overhaul](https://mods.factorio.com/mods/orzelek/rso-mod) *up to date with v3.3.10*
++ [Omniwood](https://mods.factorio.com/mods/EmperorZelos/omnimatter_wood) *up to date with v0.1.8*
++ [Factorissimo 2](https://mods.factorio.com/mods/MagmaMcFry/Factorissimo2) *up to date with v2.1.8*
++ [The Ruins Mod](https://mods.factorio.com/mods/Gangsir/Ruins) *up to date with v0.1.2*
++ [Robot Battery Research](https://mods.factorio.com/mods/Klonan/Robot_Battery_Research) *up to date with v0.1.0*
 
 **Corrected (when needed) EN-locale provided for all supported mods.**
 
@@ -84,7 +86,8 @@ All of these mods are added to mod dependecies with < 0.0.1 version to prevent s
 If you found other incompatibilities - tell, i'll resolve it or add to list
 
 ## Known issues:
-Some locale string are missing
+Not full localization of Creative mode and Portal Research.
+Missings locale string in mod-setting-description when original mod doesn't have descriptions. Affects any not-supported mod.
 
 ## Future plans:
 + Add settings for turn on/off updated graphics for other mods
@@ -117,6 +120,6 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 ChangeLog
 ---
 
-+ **1.0.2** | *04.07.2017* - removed dependency from Noxys Extra Settings Info - code merged and reworked to be more informative and totally localized
++ **1.0.2** | *05.07.2017* - removed dependency from Noxys Extra Settings Info - code merged and reworked to be more informative and totally localized. Updated localizations of all supported mods and added localization for: Omniwood, Factorissimo2 (minor locale fixes), The Ruins Mod and Robot Battery Research. Localization now includes mod names and descriptions.
 + **1.0.1** | *04.07.2017* - dependency from Noxys Extra Settings Info - very useful in mod settings. Fixed remote.calls since release [0.15.27](https://forums.factorio.com/viewtopic.php?f=3&t=50528)
 + **1.0.0** | *03.07.2017* - merged portal_research_addon and factorio-ru in single mod, added and reworked toxic-jungle and mountains mods, added new graphics for omnitractors
