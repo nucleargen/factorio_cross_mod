@@ -30,7 +30,7 @@ for _,recipe in pairs(data.raw.recipe) do
 				primary = fcm_defines.data.colors[main_result.name],
 				secondary = fcm_defines.data.colors[main_result.name]
 			}
-			log(recipe.name)
+			if fcm_debug then log("tinted omnitractor recipe: "..recipe.name) end
 		end
 	end
 --end

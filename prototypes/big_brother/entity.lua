@@ -1,4 +1,4 @@
-if mods[fcm_defines.mods_names.big_brother] and settings.startup[fcm_defines.keys.names.settings.big_brother_tweaks] then
+if mods[fcm_defines.mods_names.big_brother] and settings.startup[fcm_defines.keys.names.settings.big_brother_tweaks].value then
 	for radar_amplification_type = 0, 9 do
 		for radar_efficiency_type = 0, 9 do
 
@@ -9,11 +9,13 @@ if mods[fcm_defines.mods_names.big_brother] and settings.startup[fcm_defines.key
 			local energy_usage_per_revealed_sector = 6 -- kW per revealed sector
 			local energy_usage = energy_usage_itself + energy_usage_per_revealed_sector * math.pow(2 * max_distance_of_nearby_sector_revealed + 1,2)
 
-			-- base time to scan is ~40s
 			-- energy per scanning sector formula is simple: E =  Eu * t, where Eu - current energy usage, t - desired time to scan, defined to be
-			-- using exponential formula with manually picked coefficients: t = 49,668*exp(-0,232*x)
-			-- only dependent on radar effeciency tech. On 0 effeceincy level time is ~40s, on 9 - ~5s
-			local desired_time = 49,668 * math.exp(-0.232 * radar_efficiency_type)
+			-- using exponential formula with manual coefficients: t = 33.3*exp(-0.232*x) - this is like vanilla on 0 eff tech
+			-- only dependent on radar effeciency tech
+			local base_time = settings.startup[fcm_defines.keys.names.settings.big_brother_base_time].value
+			local exp_coeff = settings.startup[fcm_defines.keys.names.settings.big_brother_exponent].value
+			local desired_time = math.ceil(base_time * math.exp(exp_coeff * radar_efficiency_type)*10)/10
+			if fcm_debug then log("BB radar eff type: "..radar_efficiency_type.."; desired time: "..desired_time) end
 
 			local energy_per_sector = energy_usage * desired_time
 

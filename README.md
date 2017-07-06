@@ -18,11 +18,12 @@ Adds cross-support between some other mods. You can use any mix of supported mod
 
 ## List of supported mods:
 ### 1. Cross-link:
-+ [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter).
++ [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter)
 Additionally contains slightly modified, recipe depended and hd graphics for Omnitractors
-+ [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research).
++ [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research) - linked with Omnimatter
 Additionally contains changes graphics for Factorium ore
-+ [StrangeMatter](https://mods.factorio.com/mods/5cript/StrangeMatter)
++ [StrangeMatter](https://mods.factorio.com/mods/5cript/StrangeMatter) - linked with Omnimatter and Portal Research
++ [Big Brother](https://mods.factorio.com/mods/Afforess/Big_Brother) - extended by optional tweaks
 ### 2. RU-locale (including mod names and descriptions):
 + [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter) *up to date with v1.2.5*
 + [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research) *partially up to date with v0.7.7*
@@ -65,9 +66,12 @@ Contains remote interface: remote.call("fcm_mountains","register_surface",surfac
 + Includes reworked [Big Brother Tweaked](https://mods.factorio.com/mods/nucleargen/Big_Brother_Tweaked mod). Enables by startup setting. Available if Big Brother mod active. Changes radius, scan time and power consuption of Big Brother's radars and survelliance cameras.
 
 ## Mod settings:
++ [startup] **Debug mode** Beware! Enabled debug mode cause huge log-file!
 + [startup] **Factorium ore omnitraction tier** - sets up omnitraction recipes tier of Factorium ore from omnite. *Available if both Portal Research and Omnimatter mods active*
 + [startup] **Strange matter to omnite only** - when enabled - only omnite can be retrieved from strange matter. *Available if both StrangeMatter and Omnimatter mods active*
 + [startup] **Big brother's radars tweak** - activates tweaks for Big brother's radars. *Available if Big Brother mod active*
++ [startup] **BB's radar scan base time** - Scanning time on 0 radar effeciency level. Vanilla time is ~33.3s. *Available if Big Brother mod active*
++ [startup] **BB's radar scan time exponent** - Determines how fast scan time decreases depending on radar effeciency researches. Value = 0 results in scan time has no change from its basis (always equal base time), value = 0.5 results in very fast descreased time. *Available if Big Brother mod active*
 + [runtime-global] **Offworld resources: only omnite** - when enabled - only omnite can be found on offworld sites. *Available if both Portal Research and Omnimatter mods active*
 + [runtime-global] **Omnite generation weight** - if only omnite option disabled - defines possibility to find other solid ores on offworld sites. Smaller value - higher possibility. *Available if both Portal Research and Omnimatter mods active*
 + [runtime-global] **Offworld Factorium ore** - if enabled - makes possible to find factorium ore on offworld sites. *Available if Portal Research mod active*. If Omnimatter present and only omnite option enabled - this setting will be omitted.
@@ -76,7 +80,6 @@ Contains remote interface: remote.call("fcm_mountains","register_surface",surfac
 + [runtime-global] **Enable Mountains** - If enabled - generate mountains over any solid resource patches on registered surfaces
 + [runtime-global] **Maximum stone particles per mountain** - Maximum for number of generated stone particles per each generated mountain
 + [runtime-global] **Density of mountains on resources patches** - Less number - more density
-+ [runtime-global] **Debug mode** Beware! Enabled debug mode cause huge log-file!
 
 ## Incompatibilities:
 + [Russian locale for some mods](https://mods.factorio.com/mods/nucleargen/factorio-ru)
@@ -122,7 +125,7 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 ChangeLog
 ---
 
-+ **1.1.0** | *06.07.2017* - Included rewritten radars tweaks from Big Brother Tweaked. Now enables by mod setting and active Big Brother mod.
++ **1.1.0** | *06.07.2017* - Included rewritten radars tweaks from Big Brother Tweaked. Now enables by mod setting with active Big Brother mod. Debug mode setting are now startup.
 + **1.0.3** | *05.07.2017* - Bugfix with offworld factorium ore. Bugfix with jungle generation when mountains enabled too. Added debug mode setting.
 + **1.0.2** | *05.07.2017* - Removed dependency from Noxys Extra Settings Info - code merged and reworked to be more informative and totally localized. Updated localizations of all supported mods and added localization for: Omniwood, Factorissimo2 (minor locale fixes), The Ruins Mod and Robot Battery Research. Localization now includes mod names and descriptions.
 + **1.0.1** | *04.07.2017* - Dependency from Noxys Extra Settings Info - very useful in mod settings. Fixed remote.calls since release [0.15.27](https://forums.factorio.com/viewtopic.php?f=3&t=50528)

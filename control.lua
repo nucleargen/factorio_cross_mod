@@ -1,7 +1,7 @@
 require("defines")
 require("functions")
 
-fcm_debug = settings.global[fcm_defines.keys.names.settings.debug_mode].value
+fcm_debug = settings.startup[fcm_defines.keys.names.settings.debug_mode].value
 if not fcm_registry then fcm_registry = {} end 
 if not fcm_registry.events then fcm_registry.events = {} end
 if not fcm_registry.events.on_chunk_generated then fcm_registry.events.on_chunk_generated = {} end
