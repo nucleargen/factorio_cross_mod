@@ -63,7 +63,7 @@ Additionally contains changes graphics for Factorium ore
 Contains remote interface: remote.call("fcm_jungle","register_surface",surface_name) and remote.call("fcm_jungle","unregister_surface",surface_name) for controlling jungle generation on modded surfaces. By default, generation allowed only on "nauvis"
 + Includes reworked [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up) mod. Enables by runtime setting. Customizable mountain density and hardness.
 Contains remote interface: remote.call("fcm_mountains","register_surface",surface_name) and remote.call("fcm_mountains","unregister_surface",surface_name) for controlling mountains generation on modded surfaces. By default, generation allowed only on "nauvis"
-+ Includes reworked [Big Brother Tweaked](https://mods.factorio.com/mods/nucleargen/Big_Brother_Tweaked mod). Enables by startup setting. Available if Big Brother mod active. Changes radius, scan time and power consuption of Big Brother's radars and survelliance cameras.
++ Includes reworked [Big Brother Tweaked](https://mods.factorio.com/mods/nucleargen/Big_Brother_Tweaked) mod. Enables by startup setting. Available if Big Brother mod active. Changes radius, scan time and power consuption of Big Brother's radars and survelliance cameras.
 
 ## Mod settings:
 + [startup] **Debug mode** Beware! Enabled debug mode cause huge log-file!
