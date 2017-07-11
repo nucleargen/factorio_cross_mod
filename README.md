@@ -4,9 +4,9 @@ Adds cross-support between some other mods. You can use any mix of supported mod
 
 + Name: Factorio Cross Mod (factorio_cross_mod)
 + Category: compilation, mod pack, localization, other
-+ MOD Version: 1.1.0
++ MOD Version: 1.1.1
 + Factorio Version: 0.15.X
-+ Latest Release: 06 Jul 2017
++ Latest Release: 11 Jul 2017
 + Dependencies: All are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
 + Factorio forums: [thread](https://forums.factorio.com/viewtopic.php?f=94&t=50522)
@@ -125,6 +125,7 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 ChangeLog
 ---
 
++ **1.1.1** | *11.07.2017* - Bugfix for Jungle and Mountains generations. Now it's generated slightly after chunk generation (at least after 30 ticks), but provide more correct generation. If Mountains enabled or RSO removing trees - no trees will be spawned on ore patches. Also guarantees that RSO trees removal removes ALL trees. Also, with Omnimatter - Mountains mining result now is omnite.
 + **1.1.0** | *06.07.2017* - Included rewritten radars tweaks from Big Brother Tweaked. Now enables by mod setting with active Big Brother mod. Debug mode setting are now startup.
 + **1.0.3** | *05.07.2017* - Bugfix with offworld factorium ore. Bugfix with jungle generation when mountains enabled too. Added debug mode setting.
 + **1.0.2** | *05.07.2017* - Removed dependency from Noxys Extra Settings Info - code merged and reworked to be more informative and totally localized. Updated localizations of all supported mods and added localization for: Omniwood, Factorissimo2 (minor locale fixes), The Ruins Mod and Robot Battery Research. Localization now includes mod names and descriptions.

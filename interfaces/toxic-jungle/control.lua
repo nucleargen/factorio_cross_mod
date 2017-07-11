@@ -43,7 +43,7 @@ Jungle.generate_trees = function(event)
 			end
 		end
 	end
-	if fcm_debug then log("Jungle: generation on chunk ready: "..tostring(allowed).."; mountains enabled: "..tostring(settings.global[fcm_defines.keys.names.settings.mountains_enabled].value)) end
+	if fcm_debug then log("Jungle: generation on chunk ready, surface: "..tostring(allowed).."; mountains enabled: "..tostring(settings.global[fcm_defines.keys.names.settings.mountains_enabled].value).."; RSO remove trees: "..tostring(settings.global[fcm_defines.keys.names.settings.rso_remove_trees].value)) end
 	if not allowed then 
 		return
 	end
@@ -68,15 +68,25 @@ Jungle.generate_trees = function(event)
 				local tree_type = Jungle.allowed_trees[math.random(#Jungle.allowed_trees)]
 
 				-- spawn tree
-				local check_for_resources = surface.count_entities_filtered({type = "resource", position = {x,y}})
+				local check_for_resources = surface.count_entities_filtered({type = "resource", area = {{x-2,y-2},{x+2,y+2}}})
 				--if fcm_debug then log("Jungle: tile have resources: "..check_for_resources) end
-				if check_for_resources == 0 or not settings.global[fcm_defines.keys.names.settings.mountains_enabled].value then
-					if fcm_debug then log("Jungle: Mountains disabled or tile is not resource") end
+				--if fcm_debug then log("Jungle: check to possible tree place: "..tostring(check_for_resources==0).."; "..tostring(not settings.global[fcm_defines.keys.names.settings.mountains_enabled].value).."; "..tostring(not settings.global[fcm_defines.keys.names.settings.rso_remove_trees].value)) end
+				if check_for_resources == 0 or ((not settings.global[fcm_defines.keys.names.settings.mountains_enabled].value) and (not settings.global[fcm_defines.keys.names.settings.rso_remove_trees].value)) then
+					if check_for_resources == 1 and fcm_debug then log("Jungle: mountains enabled: "..tostring(settings.global[fcm_defines.keys.names.settings.mountains_enabled].value).."; RSO remove trees: "..tostring(settings.global[fcm_defines.keys.names.settings.rso_remove_trees].value)) end
+					--if fcm_debug then log("Jungle: (Mountains disabled and RSO removing trees) or tile is not resource") end
 					if surface.can_place_entity{name = tree_type, position = {x, y}} then
-						if fcm_debug then log("Jungle: can place_tree at "..x..","..y) end
+						--if fcm_debug then log("Jungle: can place_tree at "..x..","..y) end
 						surface.create_entity{name = tree_type, position = {x, y}}
 					end
 				end
+			end
+		end
+	end
+
+	if settings.global[fcm_defines.keys.names.settings.rso_remove_trees].value then
+		for _, entity in pairs(surface.find_entities_filtered({type = "tree", area = {{minx,miny},{maxx,maxy}}})) do
+			if entity.valid and surface.count_entities_filtered({type = "resource", area = {{entity.position.x-2,entity.position.y-2},{entity.position.x+2,entity.position.y+2}}}) ~= 0 then
+				entity.destroy()
 			end
 		end
 	end

@@ -264,3 +264,7 @@ data:extend({
     }
 },
 })
+if mods[fcm_defines.mods_names.omnimatter] then
+	data.raw["simple-entity"]["small-minable-rock"].minable.result = "omnite"
+	data.raw["simple-entity"]["mountain"].minable.result = "omnite"
+end
