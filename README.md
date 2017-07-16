@@ -4,9 +4,9 @@ Adds cross-support between some other mods. You can use any mix of supported mod
 
 + Name: Factorio Cross Mod (factorio_cross_mod)
 + Category: compilation, mod pack, localization, other
-+ MOD Version: 1.1.2
++ MOD Version: 1.2.0
 + Factorio Version: 0.15.X
-+ Latest Release: 11 Jul 2017
++ Latest Release: ?? Jul 2017
 + Dependencies: All are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
 + Factorio forums: [thread](https://forums.factorio.com/viewtopic.php?f=94&t=50522)
@@ -64,6 +64,7 @@ Contains remote interface: remote.call("fcm_jungle","register_surface",surface_n
 + Includes reworked [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up) mod. Enables by runtime setting. Customizable mountain density and hardness.
 Contains remote interface: remote.call("fcm_mountains","register_surface",surface_name) and remote.call("fcm_mountains","unregister_surface",surface_name) for controlling mountains generation on modded surfaces. By default, generation allowed only on "nauvis"
 + Includes reworked [Big Brother Tweaked](https://mods.factorio.com/mods/nucleargen/Big_Brother_Tweaked) mod. Enables by startup setting. Available if Big Brother mod active. Changes radius, scan time and power consuption of Big Brother's radars and survelliance cameras.
++ Own implementation of Geothermal energy usage: 2 tiers of geothermal technology. First tier allows to use thermal geysers on the map with various temperature steam output for usage in steam generators. Second tier divides geothermal energetics into 2 branches: hydrothermal and petrothermal. First provides to build gethermal heaters anywhere, which only consumes water with a small electricity requirement and returns heated steam for using in steam generators. Second allows to build anywhere expensive petrothermal generators, which directly outputs electric energy depending on geothermal gradient in place. Note: thermal geysers are not treated as normal resource patches, therefore are not removed by Omnimatter mod. Geysers placement depends on ingame biomes, including modded, such as Alien biomes.
 
 ## Mod settings:
 + [startup] **Debug mode** Beware! Enabled debug mode cause huge log-file!
