@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Square-diamond terrain generation experiments</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			#map {
+					width: 100%;
+					line-height: 1px;
+					border: 1px solid #000;
+			}
+			.map-cell {
+					width: 6px;
+					height: 6px;
+					display: inline-block;
+					background: #fff;
+			}
+		</style>
+  </head>
+  <body>
+		<form>
+			<div>
+				<label>
+					Size
+					<input name="size" value="32" type="text" />
+				</label>
+			</div>
+			<div>
+				<label>
+					Chunk size
+					<input name="chunk_size" value="32" type="text" />
+				</label>
+			</div>
+			<div>
+				<label>
+					Chunk X
+					<input name="chunk_x" value="0" type="text" />
+				</label>
+			</div>
+			<div>
+				<label>
+					Chunk Y
+					<input name="chunk_y" value="0" type="text" />
+				</label>
+			</div>
+			<div>
+				<label>
+					Seed
+					<input name="seed" value="1" type="text" />
+				</label>
+			</div>
+			<div>
+				<label>
+					Roughness
+					<input name="roughness" value="1" type="text" />
+				</label>
+			</div>
+			<div>
+				<label>
+					Base
+					<input name="base" value="0" type="text" />
+				</label>
+			</div>
+			<button type="button" class="generator">Generate</button>
+			<button type="button" class="render">Render</button>
+			<button type="button" class="reset">Reset</button>
+		</form>
+		<div id="map"></div>
+		<pre id="output"></pre>
+		<script src="./sq-di.js"></script>
+  </body>
+</html>

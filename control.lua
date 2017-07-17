@@ -10,6 +10,7 @@ fcm_registry.ticks.chunk_generated = fcm_registry.ticks.chunk_generated or {}
 
 require("interfaces/mountains/control")
 require("interfaces/toxic-jungle/control")
+require("interfaces/geothermal/control")
 
 function init()
 	if game then

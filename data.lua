@@ -2,6 +2,8 @@ require("defines")
 require("functions")
 fcm_debug = settings.startup[fcm_defines.keys.names.settings.debug_mode].value
 
+require("prototypes/geothermal/entity")
+
 require("prototypes/mountains/entity")
 
 require("prototypes/portal-research/item")
