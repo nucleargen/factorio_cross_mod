@@ -18,3 +18,7 @@ function tech_add_prerequisite(technology, prerequisite)
 		end
 	end
 end
+
+function distance(position1, position2)
+  return ((position1.x - position2.x)^2 + (position1.y - position2.y)^2)^0.5
+end 

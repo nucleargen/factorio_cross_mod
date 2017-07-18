@@ -5,6 +5,9 @@ local base_temp = 25
 local max_temp = 500
 local min_temp = 15
 local roughness = 5
+local geothermal_source_temp_treshold = 450
+local geothermal_source_probability = 0.3
+local scanner_radius = 16
 
 Square_Diamond_Gen = {}
 Square_Diamond_Gen.cache = {}
@@ -13,7 +16,7 @@ Square_Diamond_Gen.chunks_generated = 0
 
 Square_Diamond_Gen.get_value = function(x,y,val,region)
 	local index = x .. '_' .. y
-	-- if fcm_debug then log("gv: requested "..x..","..y) end
+	--if fcm_debug then log("gv: requested "..x..","..y..";"..(val and val or "nil")..";"..(region.x and region.x or "nil")) end
 	if val ~= nil then
 		Square_Diamond_Gen.cache[index] = math.max(min_temp,math.min(max_temp,val))
 	-- divide whole map into square regions with size = gensize and centered in map center
@@ -82,8 +85,9 @@ Square_Diamond_Gen.rand_from_pair = function(x,y,seed)
 end
 
 Square_Diamond_Gen.process_chunk = function(event)
+	local surface = game.surfaces.nauvis
 	if seed == nil then
-		seed = game.surfaces.nauvis.map_gen_settings.seed
+		seed = surface.map_gen_settings.seed
 	end
 	--if Square_Diamond_Gen.chunks_generated > 4 then
 	--	return
@@ -93,36 +97,98 @@ Square_Diamond_Gen.process_chunk = function(event)
 	local miny = event.area.left_top.y
 
 	-- bottom right of the chunk
-	local maxx = event.area.right_bottom.x
-	local maxy = event.area.right_bottom.y
+	local maxx = event.area.right_bottom.x-1
+	local maxy = event.area.right_bottom.y-1
 	-- x = minx
 	-- y = miny
 	local region = {
 		x	=	math.floor((minx + gensize/2)/gensize),
 		y	=	math.floor((miny + gensize/2)/gensize),
 	}
-	--if fcm_debug then 
-	log("geothermal region: "..region.x..","..region.y) 
-	--end
+	local chunk_max_temp = min_temp
+	if fcm_debug then log("gt: geothermal region: "..region.x..","..region.y) end
+	local chunk_max_temp_place
 	-- iterate left to right
 	for x = minx, maxx do
 		-- iterate up to down
 		for y = miny, maxy do
-			local value = Square_Diamond_Gen.get_value(x,y,nil,region)
-			if fcm_debug then log("x,y:"..x..","..y..":value:"..value) end
-			local color_index = math.floor(10 * (1 - (value - min_temp) / (max_temp - min_temp))) + 1
-			local overlay = event.surface.create_entity{
-				name = "gt_overlay_"..color_index,
-				force = game.forces.neutral,
-				position = {x,y}
-			}
-			overlay.minable = false
-			overlay.destructible = false
-			overlay.operable = false
-			--overlay.bar = Square_Diamond_Gen.get_value(x,y)
+			local temperature = Square_Diamond_Gen.get_value(x,y,nil,region)
+			if fcm_debug then log("gt: x,y:"..x..","..y..":temperature:"..temperature) end
+			local color_index = math.floor(10 * (1 - (temperature - min_temp) / (max_temp - min_temp))) + 1
+			--[[
+			if color_index == color_index then
+				local overlay = event.surface.create_entity{
+					name = "gt_overlay_"..color_index,
+					force = game.forces.neutral,
+					position = {x,y}
+				}
+				overlay.minable = false
+				overlay.destructible = false
+				overlay.operable = false
+			else 
+				log("gt: invalid temperature at "..x..","..y)
+			end
+			--]]
+			if chunk_max_temp < temperature then
+				chunk_max_temp = temperature
+				chunk_max_temp_place = {x,y}
+			end
+		end
+	end
+	if fcm_debug then log("gt: chunk max temp:"..chunk_max_temp) end
+	if chunk_max_temp > geothermal_source_temp_treshold then
+		local chance = math.random()
+		if chance <= geothermal_source_probability and surface.can_place_entity{name = "geothermal-source", position = chunk_max_temp_place} then
+			surface.create_entity{name = "geothermal-source", position = chunk_max_temp_place}
 		end
 	end
 	Square_Diamond_Gen.chunks_generated = Square_Diamond_Gen.chunks_generated + 1
 end
 
 fcm_registry.events.on_chunk_generated[#fcm_registry.events.on_chunk_generated+1] = Square_Diamond_Gen.process_chunk
+
+
+script.on_event(defines.events.on_built_entity, function(event)
+    if event.created_entity.name ~= 'geothermal-scanner' then return end
+
+    local player = game.players[event.player_index]
+    local pos = event.created_entity.position
+    local surface = event.created_entity.surface
+
+    -- Don't actually place the resource monitor entity
+    if not player.cursor_stack.valid_for_read then
+        player.cursor_stack.set_stack{name="geothermal-scanner", count=1}
+    elseif player.cursor_stack.name == "geothermal-scanner" then
+        player.cursor_stack.count = player.cursor_stack.count + 1
+    end
+    event.created_entity.destroy()
+
+	for x = pos.x - scanner_radius, pos.x + scanner_radius do
+		for y = pos.y - scanner_radius, pos.y + scanner_radius do
+			if distance(pos,{x=x,y=y}) <= scanner_radius then
+				local region = {
+					x	=	math.floor((x + gensize/2)/gensize),
+					y	=	math.floor((y + gensize/2)/gensize),
+				}
+				local temperature = Square_Diamond_Gen.get_value(x,y,nil,region)
+				local color_index = math.floor(10 * (1 - (temperature - min_temp) / (max_temp - min_temp))) + 1
+				if color_index == color_index then
+					local overlay = surface.create_entity{
+						--name = "entity-ghost",
+						name = "gt_overlay_"..color_index,
+						--force = game.forces.neutral,
+						force = player.force,
+						position = {x,y},
+						--inner_name = "gt_overlay_"..color_index,
+						--expires	=	true
+					}
+					--overlay.minable = false
+					--overlay.destructible = false
+					--overlay.operable = false
+				else 
+					log("gt: invalid temperature at "..x..","..y)
+				end
+			end
+		end
+	end
+end)

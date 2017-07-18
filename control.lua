@@ -14,11 +14,11 @@ require("interfaces/geothermal/control")
 
 function init()
 	if game then
-	offworld_resources_setup()
+		offworld_resources_setup()
 
-	--nauvis registered by default by hardcode. may be unregistered by remove call
-	--remote.call("fcm_jungle","register_surface","nauvis")
-	--remote.call("fcm_mountains","register_surface","nauvis")
+		--nauvis registered by default by hardcode. may be unregistered by remove call
+		--remote.call("fcm_jungle","register_surface","nauvis")
+		--remote.call("fcm_mountains","register_surface","nauvis")
 	end
 end
 

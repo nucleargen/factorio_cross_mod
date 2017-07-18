@@ -14,6 +14,12 @@ require("prototypes/portal-research/resource")
 require("prototypes/strange-matter/recipe")
 require("prototypes/strange-matter/technology")
 
+require("prototypes/geothermal/resource-category")
+require("prototypes/geothermal/resource")
+require("prototypes/geothermal/item")
+require("prototypes/geothermal/entity")
+require("prototypes/geothermal/recipe")
+
 if not fcm_registry then fcm_registry = {} end 
 
 if mods[fcm_defines.mods_names.omnimatter] and mods[fcm_defines.mods_names.portal_research] then
