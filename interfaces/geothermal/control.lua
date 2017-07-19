@@ -114,21 +114,30 @@ Square_Diamond_Gen.process_chunk = function(event)
 		for y = miny, maxy do
 			local temperature = Square_Diamond_Gen.get_value(x,y,nil,region)
 			if fcm_debug then log("gt: x,y:"..x..","..y..":temperature:"..temperature) end
+			--
 			local color_index = math.floor(10 * (1 - (temperature - min_temp) / (max_temp - min_temp))) + 1
 			--[[
-			if color_index == color_index then
+			if color_index == color_index and surface.can_place_entity{position={x,y},name="gt_overlay_"..color_index,force=game.forces.neutral} then
 				local overlay = event.surface.create_entity{
 					name = "gt_overlay_"..color_index,
 					force = game.forces.neutral,
 					position = {x,y}
 				}
-				overlay.minable = false
+				--overlay.minable = false
 				overlay.destructible = false
 				overlay.operable = false
 			else 
-				log("gt: invalid temperature at "..x..","..y)
+				--log("gt: invalid temperature at "..x..","..y)
 			end
 			--]]
+			if color_index == color_index then
+				local overlay = event.surface.create_entity{
+					name = "gt-heatmap-cloud-"..color_index,
+					force = game.forces.neutral,
+					position = {x+0.5,y+0.5}
+				}
+			end
+			--
 			if chunk_max_temp < temperature then
 				chunk_max_temp = temperature
 				chunk_max_temp_place = {x,y}
@@ -147,7 +156,38 @@ end
 
 fcm_registry.events.on_chunk_generated[#fcm_registry.events.on_chunk_generated+1] = Square_Diamond_Gen.process_chunk
 
+script.on_event(defines.events.on_trigger_created_entity,function(event)
+	--game.players[1].print(event.entity.name)
+	if event.entity.name ~= "geothermal-scanner-explosion" then return end
+    local pos = event.entity.position
+    local surface = event.entity.surface
 
+	local placed = 0
+
+	for x = pos.x - scanner_radius, pos.x + scanner_radius do
+		for y = pos.y - scanner_radius, pos.y + scanner_radius do
+			if distance(pos,{x=x,y=y}) <= scanner_radius then
+				local chunk_x = math.floor(x / 32) * 32
+				local chunk_y = math.floor(y / 32) * 32
+				local region = {
+					x	=	math.floor((chunk_x + gensize/2)/gensize),
+					y	=	math.floor((chunk_y + gensize/2)/gensize),
+				}
+				local temperature = Square_Diamond_Gen.get_value(x,y,nil,region)
+				local color_index = math.floor(10 * (1 - (temperature - min_temp) / (max_temp - min_temp))) + 1
+				if color_index == color_index then
+					local overlay = surface.create_entity{
+						name = "gt-heatmap-cloud-"..color_index,
+						force = game.forces.neutral,
+						position = {x+0.5,y+0.5}
+					}
+					placed = placed + 1
+				end
+			end
+		end
+	end
+end)
+--[[
 script.on_event(defines.events.on_built_entity, function(event)
     if event.created_entity.name ~= 'geothermal-scanner' then return end
 
@@ -162,33 +202,38 @@ script.on_event(defines.events.on_built_entity, function(event)
         player.cursor_stack.count = player.cursor_stack.count + 1
     end
     event.created_entity.destroy()
+	local placed = 0
 
 	for x = pos.x - scanner_radius, pos.x + scanner_radius do
 		for y = pos.y - scanner_radius, pos.y + scanner_radius do
 			if distance(pos,{x=x,y=y}) <= scanner_radius then
+				local chunk_x = math.floor(x / 32) * 32
+				local chunk_y = math.floor(y / 32) * 32
 				local region = {
-					x	=	math.floor((x + gensize/2)/gensize),
-					y	=	math.floor((y + gensize/2)/gensize),
+					x	=	math.floor((chunk_x + gensize/2)/gensize),
+					y	=	math.floor((chunk_y + gensize/2)/gensize),
 				}
 				local temperature = Square_Diamond_Gen.get_value(x,y,nil,region)
 				local color_index = math.floor(10 * (1 - (temperature - min_temp) / (max_temp - min_temp))) + 1
-				if color_index == color_index then
+				if color_index == color_index and surface.can_place_entity{position={x,y},name="gt_overlay_"..color_index,force=game.forces.neutral} then
 					local overlay = surface.create_entity{
 						--name = "entity-ghost",
 						name = "gt_overlay_"..color_index,
-						--force = game.forces.neutral,
-						force = player.force,
+						force = game.forces.neutral,
+						--force = player.force,
 						position = {x,y},
 						--inner_name = "gt_overlay_"..color_index,
-						--expires	=	true
+						--expires	=	false
 					}
 					--overlay.minable = false
 					--overlay.destructible = false
 					--overlay.operable = false
+					placed = placed + 1
 				else 
-					log("gt: invalid temperature at "..x..","..y)
+					--log("gt: invalid temperature at "..x..","..y)
 				end
 			end
 		end
 	end
 end)
+--]]

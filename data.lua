@@ -16,6 +16,7 @@ require("prototypes/strange-matter/technology")
 
 require("prototypes/geothermal/resource-category")
 require("prototypes/geothermal/resource")
+require("prototypes/geothermal/projectile")
 require("prototypes/geothermal/item")
 require("prototypes/geothermal/entity")
 require("prototypes/geothermal/recipe")
