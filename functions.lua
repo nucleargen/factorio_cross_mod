@@ -21,4 +21,8 @@ end
 
 function distance(position1, position2)
   return ((position1.x - position2.x)^2 + (position1.y - position2.y)^2)^0.5
-end 
+end
+
+function debug_log(msg)
+	if fcm_debug then log(msg) end
+end
