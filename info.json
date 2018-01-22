@@ -5,10 +5,10 @@
 	"title":			"Factorio Cross Mod",
 	"homepage":			"https://forums.factorio.com/viewtopic.php?f=94&t=50522",
 	"description":		"Adds cross-support between some other mods. You can use any mix of supported mods. Also includes several old simple mods. Contains russian locale for all supported mods. Customizable behaviour through mod settings.",
-	"factorio_version":	"0.15",
+	"factorio_version":	"0.16",
 	"source":			"https://github.com/nucleargen/factorio_cross_mod",
 	"dependencies": [
-		"base >= 0.15.23",
+		"base >= 0.16.0",
 
 		"? factorio-ru < 0.0.1",
 		"? portal-research-addon < 0.0.1",
@@ -17,7 +17,6 @@
 		"? Noxys_Extra_Settings_Info < 0.0.1",
 		"? Big_Brother_Tweaked < 0.0.1",
 
-		"? portal-research >= 0.6.8",
 		"? omnimatter >= 1.2.5",
 		"? StrangeMatter >= 0.1.6",
 

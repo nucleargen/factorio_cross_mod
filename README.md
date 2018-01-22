@@ -5,7 +5,7 @@ Adds cross-support between some other mods. You can use any mix of supported mod
 + Name: Factorio Cross Mod (factorio_cross_mod)
 + Category: compilation, mod pack, localization, other
 + MOD Version: 1.2.0
-+ Factorio Version: 0.15.X
++ Factorio Version: 0.16.X
 + Latest Release: ?? Jul 2017
 + Dependencies: All are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
@@ -13,20 +13,17 @@ Adds cross-support between some other mods. You can use any mix of supported mod
 + Source code: [GitHub](https://github.com/nucleargen/factorio_cross_mod)
 + Author: nucleargen
 + Contact: [by pm on factorio forums](https://forums.factorio.com/ucp.php?i=pm&mode=compose&u=20136), [factorio mod portal discussions](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod/discussion)
-+ Tags: cross-support, portal-research, omnimatter, strange matter, russian, mod-pack, toxic jungle, mountains
++ Tags: cross-support, omnimatter, strange matter, russian, mod-pack, toxic jungle, mountains
 + License: [MIT](https://opensource.org/licenses/MIT)
 
 ## List of supported mods:
 ### 1. Cross-link:
 + [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter)
 Additionally contains slightly modified, recipe depended and hd graphics for Omnitractors
-+ [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research) - linked with Omnimatter
-Additionally contains changes graphics for Factorium ore
 + [StrangeMatter](https://mods.factorio.com/mods/5cript/StrangeMatter) - linked with Omnimatter and Portal Research
 + [Big Brother](https://mods.factorio.com/mods/Afforess/Big_Brother) - extended by optional tweaks
 ### 2. RU-locale (including mod names and descriptions):
 + [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter) *up to date with v1.2.5*
-+ [Portal Research](https://mods.factorio.com/mods/docpaisley/portal-research) *partially up to date with v0.7.7*
 + [Strange Matter](https://mods.factorio.com/mods/5cript/StrangeMatter) *up to date with v0.1.6*
 + [Big Bags (more space in bags +longer reach)](https://mods.factorio.com/mods/binbinhfr/BigBags) *up to date with v1.0.25*
 + [Big Brother](https://mods.factorio.com/mods/Afforess/Big_Brother) *up to date with v0.4.3*
@@ -64,18 +61,13 @@ Contains remote interface: remote.call("fcm_jungle","register_surface",surface_n
 + Includes reworked [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up) mod. Enables by runtime setting. Customizable mountain density and hardness.
 Contains remote interface: remote.call("fcm_mountains","register_surface",surface_name) and remote.call("fcm_mountains","unregister_surface",surface_name) for controlling mountains generation on modded surfaces. By default, generation allowed only on "nauvis"
 + Includes reworked [Big Brother Tweaked](https://mods.factorio.com/mods/nucleargen/Big_Brother_Tweaked) mod. Enables by startup setting. Available if Big Brother mod active. Changes radius, scan time and power consuption of Big Brother's radars and survelliance cameras.
-+ Own implementation of Geothermal energy usage: 2 tiers of geothermal technology. First tier allows to use thermal geysers on the map with various temperature steam output for usage in steam generators. Second tier divides geothermal energetics into 2 branches: hydrothermal and petrothermal. First provides to build gethermal heaters anywhere, which only consumes water with a small electricity requirement and returns heated steam for using in steam generators. Second allows to build anywhere expensive petrothermal generators, which directly outputs electric energy depending on geothermal gradient in place. Note: thermal geysers are not treated as normal resource patches, therefore are not removed by Omnimatter mod. Geysers placement depends on ingame biomes, including modded, such as Alien biomes.
 
 ## Mod settings:
 + [startup] **Debug mode** Beware! Enabled debug mode cause huge log-file!
-+ [startup] **Factorium ore omnitraction tier** - sets up omnitraction recipes tier of Factorium ore from omnite. *Available if both Portal Research and Omnimatter mods active*
 + [startup] **Strange matter to omnite only** - when enabled - only omnite can be retrieved from strange matter. *Available if both StrangeMatter and Omnimatter mods active*
 + [startup] **Big brother's radars tweak** - activates tweaks for Big brother's radars. *Available if Big Brother mod active*
 + [startup] **BB's radar scan base time** - Scanning time on 0 radar effeciency level. Vanilla time is ~33.3s. *Available if Big Brother mod active*
 + [startup] **BB's radar scan time exponent** - Determines how fast scan time decreases depending on radar effeciency researches. Value = 0 results in scan time has no change from its basis (always equal base time), value = 0.5 results in very fast descreased time. *Available if Big Brother mod active*
-+ [runtime-global] **Offworld resources: only omnite** - when enabled - only omnite can be found on offworld sites. *Available if both Portal Research and Omnimatter mods active*
-+ [runtime-global] **Omnite generation weight** - if only omnite option disabled - defines possibility to find other solid ores on offworld sites. Smaller value - higher possibility. *Available if both Portal Research and Omnimatter mods active*
-+ [runtime-global] **Offworld Factorium ore** - if enabled - makes possible to find factorium ore on offworld sites. *Available if Portal Research mod active*. If Omnimatter present and only omnite option enabled - this setting will be omitted.
 + [runtime-global] **Enable toxic jungles** - If enabled - generate high-density forests anywhere on registered surfaces
 + [runtime-global] **Density of toxic jungles** - How dense jungles is
 + [runtime-global] **Enable Mountains** - If enabled - generate mountains over any solid resource patches on registered surfaces
@@ -84,7 +76,6 @@ Contains remote interface: remote.call("fcm_mountains","register_surface",surfac
 
 ## Incompatibilities:
 + [Russian locale for some mods](https://mods.factorio.com/mods/nucleargen/factorio-ru)
-+ [Portal Research Addon](https://mods.factorio.com/mods/nucleargen/portal-research-addon)
 + [Toxic Jungle](https://mods.factorio.com/mods/nucleargen/toxic-jungle)
 + [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up)
 + [Noxys Extra Settings Info](https://mods.factorio.com/mods/CobaltSky/Noxys_Extra_Settings_Info)
@@ -94,16 +85,14 @@ All of these mods are added to mod dependecies with < 0.0.1 version to prevent s
 If you found other incompatibilities - tell, i'll resolve it or add to list
 
 ## Known issues:
-Not full localization of Creative mode and Portal Research.
-Missings locale string in mod-setting-description when original mod doesn't have descriptions. Affects any not-supported mod.
+Not full localization of Creative mode and other mods
+Missings locale string in mod-setting-description when original mod doesn't have descriptions. Affects any non-supported mod
 
 ## Future plans:
-+ Add settings for turn on/off updated graphics for other mods
 + Moar customizable features
 + Maybe cross-integrate/localize other mods (possibly by community request)
 + RSO-like resource generator based on remote interfaces and per-surface settings, including AngelsInfiniteOres-like spawning (also fully customizable)
 + Include optional plutonium workarounds like some other mods (mostly like in GotLag's [Reactors](https://mods.factorio.com/mods/GotLag/Reactors), but not the same
-+ Rework Air Filtering and include it in pack
 
 ## Disclaimer:
 All changes in graphics, localizations and behaviours i've made firstly for myself, not for others. You can disagree with it, but it is so. I don't like to use mods that adds too much complexity in game, so you can't find bob's and angel's mods integration soon. But maybe later...
@@ -116,7 +105,6 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 + [Strontium](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=5715), for original Toxic jungle mod
 + [devilwarriors](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=12534), for original Mountains mod
 + [5cript](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=25384), for Strange Matter mod
-+ [docpaisley](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=17116), for Portal Research mod
 + [Afforess](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=7073), for Big Brother mod and StdLib project
 + [GotLag](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=1561), for his mods
 + [CobaltSky](https://mods.factorio.com/mods/CobaltSky), for his mods
@@ -126,6 +114,7 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 ChangeLog
 ---
 
++ **1.2.0** | *22.01.2018* - Minor issue fix
 + **1.1.2** | *11.07.2017* - Minor issue fix
 + **1.1.1** | *11.07.2017* - Bugfix for Jungle and Mountains generations. Now it's generated slightly after chunk generation (at least after 30 ticks), but provide more correct generation. If Mountains enabled or RSO removing trees - no trees will be spawned on ore patches. Also guarantees that RSO trees removal removes ALL trees. Also, with Omnimatter - Mountains mining result now is omnite.
 + **1.1.0** | *06.07.2017* - Included rewritten radars tweaks from Big Brother Tweaked. Now enables by mod setting with active Big Brother mod. Debug mode setting are now startup.

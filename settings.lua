@@ -1,5 +1,4 @@
 require("defines")
-require("settings/portal_research")
 require("settings/omnimatter")
 require("settings/strange_matter")
 require("settings/big_brother")

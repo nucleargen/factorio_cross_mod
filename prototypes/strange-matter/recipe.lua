@@ -43,25 +43,4 @@ data:extend({
 end
 end
 
-if mods[fcm_defines.mods_names.portal_research] then
-if not mods[fcm_defines.mods_names.omnimatter] or not settings.startup[fcm_defines.keys.names.settings.strange_matter_only_omnite].value then
-data:extend({
-	{
-		type = "recipe",
-		name = "factorium-synthesis",
-		energy_required = 1,
-		enabled = false,
-		category = "crafting-with-fluid",
-		ingredients =
-		{
-			{type="fluid", name="strange-matter", amount=.5}
-		},
-		result= "factorium-ore",
-		subgroup = "synthesis",
-		order = "a-c"
-	}
-})
-end
-end
-
 end
