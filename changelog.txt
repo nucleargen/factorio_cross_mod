@@ -1,72 +1,74 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.2.0
-Date: 2018-01-22
-
+Version: 1.2.1
+Date: 07. 02. 2018
   Features:
-	- Factorio v0.16 support
+    - BigBags mod features:
+        inventory, toolbelt, reach, robot capacity and logisitic slots techs, slightly modified;
+        configurable via startup mod settings (isntead config file) stack and ammo magazine factor.
+    - Cross support between Realistic ores and Angels Infinite ores mods: infinite ores (iron, copper and uranium) now have realistic look too.
+    - New techs: science pack now must be researched directly in tech tree. Approprite techs have low cost and dependencies from all science packs components. This feature can be enabled in startup mod settings
+  Changes:
+    - corrected incompatibility list in info.json for 0.16 changes
+    - FCM now incompatible with BigBags mod
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 22. 01. 2018
+  Features:
+    - Factorio v0.16 support
   Changes:
     - Removed support of Portal Research mod, since it no longer maintained
   Meta:
     - Began maintaining changelog.txt for display in-game after updates
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
-Date: 2017-07-11
-
+Date: 11. 07. 2017
   Changes:
     - Minor issue fix
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
-Date: 2017-07-11
-
+Date: 11. 07. 2017
   Changes:
-    - Bugfix for Jungle and Mountains generations. Now it's generated slightly after chunk generation (at least after 30 ticks), but provide more correct generation. If Mountains enabled or RSO removing trees - no trees will be spawned on ore patches. Also guarantees that RSO trees removal removes ALL trees
-	- Mountains with Omnimatter - Mountains mining result now is omnite
-
+    - Bugfix for Jungle and Mountains generations. 
+      Now it's generated slightly after chunk generation (at least after 30 ticks), but provide more correct generation. 
+      If Mountains enabled or RSO removing trees - no trees will be spawned on ore patches. 
+      Also guarantees that RSO trees removal removes ALL trees
+    - Mountains with Omnimatter - Mountains mining result now is omnite
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
-Date: 2017-07-06
-
+Date: 06. 07. 2017
   Features:
-    - Included rewritten radars tweaks from Big Brother Tweaked. Now enables by mod setting with active Big Brother mod
+    - Included rewritten radars tweaks from Big Brother Tweaked. 
+      Now enables by mod setting with active Big Brother mod
   Changes:
     - Debug mode setting are now startup
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
-Date: 2017-07-05
-
+Date: 05. 07. 2017
   Features:
     - Added debug mode setting
   Changes:
     - Bugfix with offworld factorium ore
     - Bugfix with jungle generation when mountains enabled
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
-Date: 2017-07-05
-
+Date: 05. 07. 2017
   Features:
-    - Updated localizations of all supported mods and added localization for: Omniwood, Factorissimo2 (minor locale fixes), The Ruins Mod and Robot Battery Research. Localization now includes mod names and descriptions
+    - Updated localizations of all supported mods and added localization for: Omniwood, Factorissimo2 (minor locale fixes), The Ruins Mod and Robot Battery Research.
+      Localization now includes mod names and descriptions
   Changes:
     - Removed dependency from Noxys Extra Settings Info - code merged and reworked to be more informative and totally localized
     - Logistics Warehousing research cost is now based on the cost of Logistic System
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
-Date: 2017-07-04
-
+Date: 04. 07. 2017
   Features:
     - Dependency from Noxys Extra Settings Info - very useful in mod settings
   Changes:
     - Fixed remote.calls since release of Factorio v0.15.27
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
-Date: 2017-07-03
-
+Date: 03. 07. 2017
   Features:
-    - Merged portal_research_addon and factorio-ru in single mod
-	- added and reworked toxic-jungle and mountains mods
-	- added new graphics for omnitractors
+    - Merged Portal Research Addon and Factorio-Ru in single mod
+    - Added and reworked toxic-jungle and mountains mods
+    - Added new graphics for omnitractors

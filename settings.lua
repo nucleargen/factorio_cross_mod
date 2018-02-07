@@ -4,7 +4,8 @@ require("settings/strange_matter")
 require("settings/big_brother")
 require("settings/toxic_jungle")
 require("settings/mountains")
-require("settings/geothermal")
+require("settings/simple_science")
+require("settings/big_bags")
 
 data:extend({
 {

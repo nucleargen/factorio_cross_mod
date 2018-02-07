@@ -4,9 +4,9 @@ Adds cross-support between some other mods. You can use any mix of supported mod
 
 + Name: Factorio Cross Mod (factorio_cross_mod)
 + Category: compilation, mod pack, localization, other
-+ MOD Version: 1.2.0
++ MOD Version: 1.2.1
 + Factorio Version: 0.16.X
-+ Latest Release: ?? Jul 2017
++ Latest Release: 07 Feb 2018
 + Dependencies: All are optional, full list see below
 + Website: [Mod Portal](https://mods.factorio.com/mods/nucleargen/factorio_cross_mod)
 + Factorio forums: [thread](https://forums.factorio.com/viewtopic.php?f=94&t=50522)
@@ -19,13 +19,12 @@ Adds cross-support between some other mods. You can use any mix of supported mod
 ## List of supported mods:
 ### 1. Cross-link:
 + [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter)
-Additionally contains slightly modified, recipe depended and hd graphics for Omnitractors
-+ [StrangeMatter](https://mods.factorio.com/mods/5cript/StrangeMatter) - linked with Omnimatter and Portal Research
++ [StrangeMatter](https://mods.factorio.com/mods/5cript/StrangeMatter) - linked with Omnimatter
 + [Big Brother](https://mods.factorio.com/mods/Afforess/Big_Brother) - extended by optional tweaks
++ [RealisticOres](https://mods.factorio.com/mods/ouk_ouk/RealisticOres) - linked with [Angels Infinite Ores](https://mods.factorio.com/mod/Arch666Angel/angelsinfiniteores): infinite versions of iron, copper and uranium now have realistic look too.
 ### 2. RU-locale (including mod names and descriptions):
 + [Omnimatter](https://mods.factorio.com/mods/EmperorZelos/omnimatter) *up to date with v1.2.5*
 + [Strange Matter](https://mods.factorio.com/mods/5cript/StrangeMatter) *up to date with v0.1.6*
-+ [Big Bags (more space in bags +longer reach)](https://mods.factorio.com/mods/binbinhfr/BigBags) *up to date with v1.0.25*
 + [Big Brother](https://mods.factorio.com/mods/Afforess/Big_Brother) *up to date with v0.4.3*
 + [DayPhaseAdjuster](https://mods.factorio.com/mods/AliceTheGorgon/DayPhaseAdjuster) *up to date with v1.0.1*
 + [EvoGUI - Evolution Factor Indicator and more](https://mods.factorio.com/mods/Narc/EvoGUI) *up to date with v0.4.205*
@@ -47,7 +46,7 @@ Additionally contains slightly modified, recipe depended and hd graphics for Omn
 + [Better Cable and Steel Making](https://mods.factorio.com/mods/LaVADraGoN/cableSteelMaking) *up to date with v1.0.2*
 + [Creative Mode](https://mods.factorio.com/mods/Mooncat/creative-mode) *partially up to date with v0.1.2*
 + [Shuttle Train Lite](https://mods.factorio.com/mods/folk/folk-shuttle) *up to date with v0.1.12*
-+ [Resource Spawner Overhaul](https://mods.factorio.com/mods/orzelek/rso-mod) *up to date with v3.3.10*
++ [Resource Spawner Overhaul](https://mods.factorio.com/mods/orzelek/rso-mod) *up to date with v3.5.6*
 + [Omniwood](https://mods.factorio.com/mods/EmperorZelos/omnimatter_wood) *up to date with v0.1.8*
 + [Factorissimo 2](https://mods.factorio.com/mods/MagmaMcFry/Factorissimo2) *up to date with v2.1.8*
 + [The Ruins Mod](https://mods.factorio.com/mods/Gangsir/Ruins) *up to date with v0.1.2*
@@ -61,6 +60,8 @@ Contains remote interface: remote.call("fcm_jungle","register_surface",surface_n
 + Includes reworked [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up) mod. Enables by runtime setting. Customizable mountain density and hardness.
 Contains remote interface: remote.call("fcm_mountains","register_surface",surface_name) and remote.call("fcm_mountains","unregister_surface",surface_name) for controlling mountains generation on modded surfaces. By default, generation allowed only on "nauvis"
 + Includes reworked [Big Brother Tweaked](https://mods.factorio.com/mods/nucleargen/Big_Brother_Tweaked) mod. Enables by startup setting. Available if Big Brother mod active. Changes radius, scan time and power consuption of Big Brother's radars and survelliance cameras.
++ Includes reworked [BigBags](https://mods.factorio.com/mod/binbinhfr/BigBags) mod. Rework done for supporting mod settings. Minor techs changes. Stack and magazine factors moved to startup mod settings.
++ Adds option for researching science packs itself. Each science pack (excl. science pack 1) must be researched. New techs have low cost and dependencies from pack`s components.
 
 ## Mod settings:
 + [startup] **Debug mode** Beware! Enabled debug mode cause huge log-file!
@@ -68,6 +69,9 @@ Contains remote interface: remote.call("fcm_mountains","register_surface",surfac
 + [startup] **Big brother's radars tweak** - activates tweaks for Big brother's radars. *Available if Big Brother mod active*
 + [startup] **BB's radar scan base time** - Scanning time on 0 radar effeciency level. Vanilla time is ~33.3s. *Available if Big Brother mod active*
 + [startup] **BB's radar scan time exponent** - Determines how fast scan time decreases depending on radar effeciency researches. Value = 0 results in scan time has no change from its basis (always equal base time), value = 0.5 results in very fast descreased time. *Available if Big Brother mod active*
++ [startup] **BigBags: magazine factor** Multiplies all ammo magazines capacity by this value
++ [startup] **BigBags: stack factor** Multiplies all item stacks capacity by this value
++ [startup] **Simple Science** Enables researching science packs. All science packs, excluding Science pack 1, must be researched in new techs. Techs have low cost and dependencies from science packs components.
 + [runtime-global] **Enable toxic jungles** - If enabled - generate high-density forests anywhere on registered surfaces
 + [runtime-global] **Density of toxic jungles** - How dense jungles is
 + [runtime-global] **Enable Mountains** - If enabled - generate mountains over any solid resource patches on registered surfaces
@@ -76,13 +80,14 @@ Contains remote interface: remote.call("fcm_mountains","register_surface",surfac
 
 ## Incompatibilities:
 + [Russian locale for some mods](https://mods.factorio.com/mods/nucleargen/factorio-ru)
++ [Portal Research Addon](https://mods.factorio.com/mod/nucleargen/portal-research-addon)
 + [Toxic Jungle](https://mods.factorio.com/mods/nucleargen/toxic-jungle)
 + [Mountains](https://mods.factorio.com/mods/nucleargen/Mountains-up)
 + [Noxys Extra Settings Info](https://mods.factorio.com/mods/CobaltSky/Noxys_Extra_Settings_Info)
 + [Big Brother Tweaked](https://mods.factorio.com/mods/nucleargen/Big_Brother_Tweaked)
++ [BigBags](https://mods.factorio.com/mod/binbinhfr/BigBags)
 
-All of these mods are added to mod dependecies with < 0.0.1 version to prevent startup with it.
-If you found other incompatibilities - tell, i'll resolve it or add to list
+If you found other incompatibilities - tell me, i'll resolve it or add to list
 
 ## Known issues:
 Not full localization of Creative mode and other mods
@@ -92,7 +97,6 @@ Missings locale string in mod-setting-description when original mod doesn't have
 + Moar customizable features
 + Maybe cross-integrate/localize other mods (possibly by community request)
 + RSO-like resource generator based on remote interfaces and per-surface settings, including AngelsInfiniteOres-like spawning (also fully customizable)
-+ Include optional plutonium workarounds like some other mods (mostly like in GotLag's [Reactors](https://mods.factorio.com/mods/GotLag/Reactors), but not the same
 
 ## Disclaimer:
 All changes in graphics, localizations and behaviours i've made firstly for myself, not for others. You can disagree with it, but it is so. I don't like to use mods that adds too much complexity in game, so you can't find bob's and angel's mods integration soon. But maybe later...
@@ -113,8 +117,8 @@ All changes in graphics, localizations and behaviours i've made firstly for myse
 
 ChangeLog
 ---
-
-+ **1.2.0** | *22.01.2018* - Minor issue fix
++ **1.2.1** | *07.02.2018* - BigBags mod features: inventory, toolbelt, reach, robot capacity and logisitic slots techs, slightly modified; configurable via startup mod settings (isntead config file) stack and ammo magazine factor. Cross support between Realistic ores and Angels Infinite ores mods: infinite ores (iron, copper and uranium) now have realistic look too. New techs: science pack now must be researched directly in tech tree. Approprite techs have low cost and dependencies from all science packs components. This feature can be enabled in startup mod settings. corrected incompatibility list in info.json for 0.16 changes. FCM now incompatible with BigBags mod
++ **1.2.0** | *22.01.2018* - Factorio v0.16 support. Removed support of Portal Research mod, since it no longer maintained. Began maintaining changelog.txt for display in-game after updates
 + **1.1.2** | *11.07.2017* - Minor issue fix
 + **1.1.1** | *11.07.2017* - Bugfix for Jungle and Mountains generations. Now it's generated slightly after chunk generation (at least after 30 ticks), but provide more correct generation. If Mountains enabled or RSO removing trees - no trees will be spawned on ore patches. Also guarantees that RSO trees removal removes ALL trees. Also, with Omnimatter - Mountains mining result now is omnite.
 + **1.1.0** | *06.07.2017* - Included rewritten radars tweaks from Big Brother Tweaked. Now enables by mod setting with active Big Brother mod. Debug mode setting are now startup.
