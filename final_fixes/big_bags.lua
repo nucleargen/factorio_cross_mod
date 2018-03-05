@@ -1,3 +1,4 @@
+if settings.startup[fcm_defines.keys.names.settings.big_bags_enable].value then
 function new_size( oldvalue, offset, factor )
 	if oldvalue == nil then oldvalue = 1 end
 	local v = offset + oldvalue * factor
@@ -33,4 +34,6 @@ end
 -- capsule stacks
 for _, caps in pairs(data.raw["capsule"]) do
 	caps.stack_size = new_size( caps.stack_size, 0, my_stack_factor )	
+end
+
 end

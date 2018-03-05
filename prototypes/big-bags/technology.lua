@@ -1,3 +1,4 @@
+if settings.startup[fcm_defines.keys.names.settings.big_bags_enable].value then
 -- vanilla player data :
 -- inventory_size = 60,
 -- build_distance = 6,
@@ -265,3 +266,5 @@ func_techno = function(n,inc)
 end
 
 add_technos("worker-robots-storage",4,9,01)
+
+end
